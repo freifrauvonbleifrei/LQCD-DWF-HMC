@@ -1,0 +1,1639 @@
+Bridge++ 2.0.0
+
+Timer: timestamp: 2023/09/27 01:57:20 +0900
+file = main.yaml
+Main: input parameters
+  lattice_size     = [32, 16, 16, 24]
+  grid_size        = [2, 2, 4, 3]
+  number of thread = 12
+  number of color  = 3
+  logfile          = stdout
+  ildg_logfile     = stdout
+  vlevel           = General
+
+Lattice parameters:
+  Lx = 32,  Ly = 16,  Lz = 16,  Lt = 24,
+  Nx = 16,  Ny = 8,  Nz = 4,  Nt = 8,
+  NPEx = 2,  NPEy  = 2,  NPEz  = 4,  NPEt  = 3,
+  Lvol = 196608,  Nvol = 4096,  NPE = 48,
+  Ndim = 4
+  Nc   = 3
+  Nd   = 4
+
+ThreadManager: initialization
+  Number of threads = 12
+bridge_alt_init finished.
+file = HMC_DWF_Nf2p1_eo.yaml
+parameter setup finished.
+  gconf_status   = Continue
+  gconf_read     = Text_4x4x4x8
+  readfile       = ../conf_04040408.txt
+  gconf_write    = Binary_Parallel
+  writefile      = ./conf_output.dat
+  rand_type      = Mseries_parallel
+  seed           = 1234567
+  i_conf         = 200000
+  Ntraj          = 1
+  i_save_conf    = 1
+  vlevel         = General
+  gmset_type     = Dirac
+  solver_MD_type = CG
+  solver_H_type  = CG
+
+parameter output finished.
+RandomNumbers_parallel<RancomNumbers_Mseries>: init with 1234567
+ Random number init: ndelay =   1234567
+gauge config. finished
+fermion type in params_nf1: Domainwall_5din_eo
+fermion type in params_pv: Domainwall_5din_eo
+fermion type in params_nf2: Domainwall_5din_eo
+Force_G_Rectangle:
+  beta   =     4.170000
+  c_plaq =     1.666667
+  c_rect =    -0.083333
+Action_G_Rectangle:
+  beta   =     4.170000
+  c_plaq =     1.666667
+  c_rect =    -0.083333
+Force_G_Rectangle:
+  beta   =     4.170000
+  c_plaq =     1.666667
+  c_rect =    -0.083333
+Director_alt_Smear<AField<double,QXS> >: construction
+  smear_type   = APE
+  projection_type = Stout_SU3
+  ASmear_APE<AField<double,QXS> >: construction
+    ASmear_APE<AField<double,QXS> >: parameters
+      rho =   0.1000
+    AStaple_lex<AField<double,QXS> >: construction
+      ShiftAField_lex<AField<double,QXS> >: construction
+        Nin = 18
+        VLENX = 4  Nxv  = 4
+        VLENY = 2  Nyv  = 4
+        VLEN  = 8  Nstv = 512
+        boundary[0] =  1
+        boundary[1] =  1
+        boundary[2] =  1
+        boundary[3] =  1
+        do_comm[0] = 1
+        do_comm[1] = 1
+        do_comm[2] = 1
+        do_comm[3] = 1
+      ShiftAField_lex<AField<double,QXS> >: construction finished.
+    AStaple_lex<AField<double,QXS> >: construction finished.
+  ASmear_APE<AField<double,QXS> >: construction finished
+  Nsmear = 3
+  ShiftAField_lex<AField<double,QXS> >: construction
+    Nin = 18
+    VLENX = 4  Nxv  = 4
+    VLENY = 2  Nyv  = 4
+    VLEN  = 8  Nstv = 512
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] =  1
+    do_comm[0] = 1
+    do_comm[1] = 1
+    do_comm[2] = 1
+    do_comm[3] = 1
+  ShiftAField_lex<AField<double,QXS> >: construction finished.
+  AforceSmear_APE<AField<double,QXS> >:
+    rho =   0.1000
+  verbose_level = General
+Director_alt_Smear<AField<double,QXS> >: construction finished
+AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  2  Nyv   = 4
+  VLEN  =  8  Nst2v = 256
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+    mq   =   1.0000
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+AForce_F_Domainwall_5din_eo<AField<double,QXS> >: construction
+  ShiftAField_eo<AField<double,QXS> >: being constructed.
+    Nin = 144
+    VLENX = 4  VLENY = 2
+    Nx2  = 8  Nvol2 = 2048
+    Nx2v = 2  Nyv  = 4
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    do_comm[0] = 1
+    do_comm[1] = 1
+    do_comm[2] = 1
+    do_comm[3] = 1
+  ShiftAField_eo<AField<double,QXS> >: construction finished.
+  AForce_F_Domainwall_5din_eo<AField<double,QXS> >: parameters:
+    gamma-matrix type = Dirac
+    mq   =   1.00000000
+    M0   =   1.00000000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+    b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+    b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+    b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+    b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+    b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+    b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+    b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+    b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+    b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+    b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+    b[10] =     1.5000000000  c[10] =     0.5000000000
+    b[11] =     1.5000000000  c[11] =     0.5000000000
+  AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+    VLENX =  4  Nx2v  = 2
+    VLENY =  2  Nyv   = 4
+    VLEN  =  8  Nst2v = 256
+    do_comm[0] = 1
+    do_comm[1] = 1
+    do_comm[2] = 1
+    do_comm[3] = 1
+    Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+      mq   =   1.0000
+      M0   =   1.0000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients b =     1.5000000000  c =     0.5000000000
+  AForce_F_Domainwall_5din<AField<double,QXS> >: construction
+    ShiftAField_lex<AField<double,QXS> >: construction
+      Nin = 144
+      VLENX = 4  Nxv  = 4
+      VLENY = 2  Nyv  = 4
+      VLEN  = 8  Nstv = 512
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      do_comm[0] = 1
+      do_comm[1] = 1
+      do_comm[2] = 1
+      do_comm[3] = 1
+    ShiftAField_lex<AField<double,QXS> >: construction finished.
+    AForce_F_Domainwall_5din<AField<double,QXS> >: parameters:
+      gamma-matrix type = Dirac
+      mq   =   1.00000000
+      M0   =   1.00000000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,QXS> >: construction
+      VLENX =  4  Nxv  = 4
+      VLENY =  2  Nyv  = 4
+      VLEN  =  8  Nstv = 512
+      do_comm[0] = 1
+      do_comm[1] = 1
+      do_comm[2] = 1
+      do_comm[3] = 1
+      Parameters of AFopr_Domainwall_5din<AField<double,QXS> >:
+        mq   =   1.0000
+        M0   =   1.0000
+        Ns   =   12
+        boundary[0] =  1
+        boundary[1] =  1
+        boundary[2] =  1
+        boundary[3] = -1
+        coefficients b =     1.5000000000  c =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,QXS> >: construction finished.
+  AForce_F_Domainwall_5din<AField<double,QXS> >: construction finished.
+AForce_F_Domainwall_5din_eo<AField<double,QXS> >: construction finished.
+AFopr_Smeared_alt<AField<double,QXS> >: construction
+AFopr_Smeared_alt<AField<double,QXS> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  2  Nyv   = 4
+  VLEN  =  8  Nst2v = 256
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+    mq   =   0.0200
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+AForce_F_Domainwall_5din_eo<AField<double,QXS> >: construction
+  ShiftAField_eo<AField<double,QXS> >: being constructed.
+    Nin = 144
+    VLENX = 4  VLENY = 2
+    Nx2  = 8  Nvol2 = 2048
+    Nx2v = 2  Nyv  = 4
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    do_comm[0] = 1
+    do_comm[1] = 1
+    do_comm[2] = 1
+    do_comm[3] = 1
+  ShiftAField_eo<AField<double,QXS> >: construction finished.
+  AForce_F_Domainwall_5din_eo<AField<double,QXS> >: parameters:
+    gamma-matrix type = Dirac
+    mq   =   0.02000000
+    M0   =   1.00000000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+    b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+    b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+    b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+    b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+    b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+    b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+    b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+    b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+    b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+    b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+    b[10] =     1.5000000000  c[10] =     0.5000000000
+    b[11] =     1.5000000000  c[11] =     0.5000000000
+  AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+    VLENX =  4  Nx2v  = 2
+    VLENY =  2  Nyv   = 4
+    VLEN  =  8  Nst2v = 256
+    do_comm[0] = 1
+    do_comm[1] = 1
+    do_comm[2] = 1
+    do_comm[3] = 1
+    Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+      mq   =   0.0200
+      M0   =   1.0000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients b =     1.5000000000  c =     0.5000000000
+  AForce_F_Domainwall_5din<AField<double,QXS> >: construction
+    ShiftAField_lex<AField<double,QXS> >: construction
+      Nin = 144
+      VLENX = 4  Nxv  = 4
+      VLENY = 2  Nyv  = 4
+      VLEN  = 8  Nstv = 512
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      do_comm[0] = 1
+      do_comm[1] = 1
+      do_comm[2] = 1
+      do_comm[3] = 1
+    ShiftAField_lex<AField<double,QXS> >: construction finished.
+    AForce_F_Domainwall_5din<AField<double,QXS> >: parameters:
+      gamma-matrix type = Dirac
+      mq   =   0.02000000
+      M0   =   1.00000000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,QXS> >: construction
+      VLENX =  4  Nxv  = 4
+      VLENY =  2  Nyv  = 4
+      VLEN  =  8  Nstv = 512
+      do_comm[0] = 1
+      do_comm[1] = 1
+      do_comm[2] = 1
+      do_comm[3] = 1
+      Parameters of AFopr_Domainwall_5din<AField<double,QXS> >:
+        mq   =   0.0200
+        M0   =   1.0000
+        Ns   =   12
+        boundary[0] =  1
+        boundary[1] =  1
+        boundary[2] =  1
+        boundary[3] = -1
+        coefficients b =     1.5000000000  c =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,QXS> >: construction finished.
+  AForce_F_Domainwall_5din<AField<double,QXS> >: construction finished.
+AForce_F_Domainwall_5din_eo<AField<double,QXS> >: construction finished.
+Parameters: fetch_string: key 'verbose_level' not found.
+AForce_F_Rational_Ratio<AField<double,QXS> >: construction
+  Parameters: fetch_string: key 'verbose_level' not found.
+   Rational parameters for the numerator (fopr1)
+  Math_Rational:
+    Np    = 16
+    n_exp = 1
+    d_exp = 4
+    x_min =   0.000100
+    x_max =  10.000000
+  Math_Rational: expected filename: parameter_rational.1_4_16_0.00010000_010.000
+  Math_Rational: read parameter file successful.
+      a0 =   4.57941845320953
+      bl[0] =  -0.00000050983819  cl[0] =   0.00001541945699
+      bl[1] =  -0.00000226565368  cl[1] =   0.00008222429586
+      bl[2] =  -0.00000737587916  cl[2] =   0.00025423469902
+      bl[3] =  -0.00002244379612  cl[3] =   0.00066851974673
+      bl[4] =  -0.00006696251426  cl[4] =   0.00165522785884
+      bl[5] =  -0.00019845177735  cl[5] =   0.00400088471266
+      bl[6] =  -0.00058680212916  cl[6] =   0.00957644066560
+      bl[7] =  -0.00173476126841  cl[7] =   0.02283574868512
+      bl[8] =  -0.00513669924215  cl[8] =   0.05440826509924
+      bl[9] =  -0.01528126404314  cl[9] =   0.12981835017351
+      bl[10] =  -0.04598618774044  cl[10] =   0.31125427782992
+      bl[11] =  -0.14226362717754  cl[11] =   0.75547621578472
+      bl[12] =  -0.47044826563223  cl[12] =   1.88981397554475
+      bl[13] =  -1.83391984985299  cl[13] =   5.10227449349711
+      bl[14] = -11.05482924186415  cl[14] =  17.03788547913311
+      bl[15] = -304.12794449872860  cl[15] = 127.53317210340374
+   Rational parameters for the denominator (fopr2)
+  Math_Rational:
+    Np    = 16
+    n_exp = -1
+    d_exp = 2
+    x_min =   0.000100
+    x_max =  10.000000
+  Math_Rational: expected filename: parameter_rational.1_2inv_16_0.00010000_010.000
+  Math_Rational: read parameter file successful.
+      a0 =   0.04357455874902
+      bl[0] =   0.00282070650275  cl[0] =   0.00000475858062
+      bl[1] =   0.00335761706103  cl[1] =   0.00004843428854
+      bl[2] =   0.00453365623760  cl[2] =   0.00017062242193
+      bl[3] =   0.00657275784926  cl[3] =   0.00046878602726
+      bl[4] =   0.00986335809253  cl[4] =   0.00118077351012
+      bl[5] =   0.01503293025124  cl[5] =   0.00287465409126
+      bl[6] =   0.02306961589643  cl[6] =   0.00690253148740
+      bl[7] =   0.03551836857467  cl[7] =   0.01648306377175
+      bl[8] =   0.05480463506181  cl[8] =   0.03929177192481
+      bl[9] =   0.08480523623249  cl[9] =   0.09371414992944
+      bl[10] =   0.13199271589603  cl[10] =   0.22425829465375
+      bl[11] =   0.20821196594718  cl[11] =   0.54138651391597
+      bl[12] =   0.33910302840678  cl[12] =   1.33555573351964
+      bl[13] =   0.59661735791449  cl[13] =   3.47735242210966
+      bl[14] =   1.27429135976300  cl[14] =  10.45314918776314
+      bl[15] =   4.78650336630183  cl[15] =  50.15020875501467
+  AShiftsolver_CG<AField<double,QXS> >:
+    Niter     = 1000
+    Stop_cond = 1.00e-26
+  AShiftsolver_CG<AField<double,QXS> >:
+    Niter     = 1000
+    Stop_cond = 1.00e-26
+AForce_F_Rational_Ratio<AField<double,QXS> >: construction finished.
+AFopr_Smeared_alt<AField<double,QXS> >: construction
+AFopr_Smeared_alt<AField<double,QXS> >: construction finished.
+Parameters: get_string: key 'verbose_level' not found.
+Action_F_alt_Rational_Ratio<AField<double,QXS> >: building numerator operator (fopr1) for calcH.
+AFopr_Rational<AField<double,QXS> >:
+  Np        = 24
+  n_exp     = 1
+  d_exp     = 4
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+AShiftsolver_CG<AField<double,QXS> >:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = 1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+ a0     =   5.58036852400570
+ bl[0] =  -0.00000017893342  cl[0] =   0.00000680966921
+ bl[1] =  -0.00000066035113  cl[1] =   0.00003317472698
+ bl[2] =  -0.00000164378409  cl[2] =   0.00008858253908
+ bl[3] =  -0.00000366395849  cl[3] =   0.00019240640142
+ bl[4] =  -0.00000784469021  cl[4] =   0.00038094220449
+ bl[5] =  -0.00001651639222  cl[5] =   0.00072010285764
+ bl[6] =  -0.00003450801613  cl[6] =   0.00132847067622
+ bl[7] =  -0.00007182893516  cl[7] =   0.00241878579066
+ bl[8] =  -0.00014923417080  cl[8] =   0.00437242872721
+ bl[9] =  -0.00030978296853  cl[9] =   0.00787311045469
+ bl[10] =  -0.00064288665697  cl[10] =   0.01414707108070
+ bl[11] =  -0.00133449572696  cl[11] =   0.02539557762695
+ bl[12] =  -0.00277241525010  cl[12] =   0.04557678310628
+ bl[13] =  -0.00576945519668  cl[13] =   0.08182922092203
+ bl[14] =  -0.01204430970414  cl[14] =   0.14709601213560
+ bl[15] =  -0.02528819229117  cl[15] =   0.26506799817940
+ bl[16] =  -0.05364677560727  cl[16] =   0.47983960417564
+ bl[17] =  -0.11595066330893  cl[17] =   0.87591633269729
+ bl[18] =  -0.25923761437870  cl[18] =   1.62361175563714
+ bl[19] =  -0.61666586749312  cl[19] =   3.09658294646239
+ bl[20] =  -1.64751311111600  cl[20] =   6.23799758235386
+ bl[21] =  -5.52951755776276  cl[21] =  14.05093804990128
+ bl[22] = -30.70905886604810  cl[22] =  41.05103479856729
+ bl[23] = -820.26774197588713  cl[23] = 285.13899386830889
+Action_F_alt_Rational_Ratio<AField<double,QXS> >: building denominator operator (fopr2) for calcH.
+AFopr_Rational<AField<double,QXS> >:
+  Np        = 24
+  n_exp     = -1
+  d_exp     = 2
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+AShiftsolver_CG<AField<double,QXS> >:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = -1
+  d_exp = 2
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_2inv_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+ a0     =   0.02934613140240
+ bl[0] =   0.00187576679788  cl[0] =   0.00000214000828
+ bl[1] =   0.00203633502198  cl[1] =   0.00002037488057
+ bl[2] =   0.00237121836286  cl[2] =   0.00006322198169
+ bl[3] =   0.00290908918827  cl[3] =   0.00014566655704
+ bl[4] =   0.00369600490003  cl[4] =   0.00029654318558
+ bl[5] =   0.00479936325229  cl[5] =   0.00056862227745
+ bl[6] =   0.00631370244568  cl[6] =   0.00105707259692
+ bl[7] =   0.00836886764079  cl[7] =   0.00193276774344
+ bl[8] =   0.01114130334107  cl[8] =   0.00350212037642
+ bl[9] =   0.01486958324782  cl[9] =   0.00631448417863
+ bl[10] =   0.01987585513521  cl[10] =   0.01135505225290
+ bl[11] =   0.02659587370200  cl[11] =   0.02039189443111
+ bl[12] =   0.03562220994587  cl[12] =   0.03660230121775
+ bl[13] =   0.04776921724364  cl[13] =   0.06570973474538
+ bl[14] =   0.06417720681615  cl[14] =   0.11806865537925
+ bl[15] =   0.08649407465009  cl[15] =   0.21255547951159
+ bl[16] =   0.11722380048163  cl[16] =   0.38405194453901
+ bl[17] =   0.16046468281443  cl[17] =   0.69856907701489
+ bl[18] =   0.22363665533168  cl[18] =   1.28629108814655
+ bl[19] =   0.32198831168678  cl[19] =   2.42262971750200
+ bl[20] =   0.49212775554847  cl[20] =   4.76241703548965
+ bl[21] =   0.84205174655561  cl[21] =  10.19313608358920
+ bl[22] =   1.81315707830627  cl[22] =  26.29456200366866
+ bl[23] =   7.00020418565486  cl[23] = 114.37433163365502
+Action_F_alt_Rational_Ratio<AField<double,QXS> >: building numerator operator for generating pseudo fermion.
+AFopr_Rational<AField<double,QXS> >:
+  Np        = 24
+  n_exp     = -1
+  d_exp     = 4
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+AShiftsolver_CG<AField<double,QXS> >:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = -1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4inv_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+ a0     =   0.17919963452202
+ bl[0] =   0.00005673386972  cl[0] =   0.00000350706154
+ bl[1] =   0.00010247508534  cl[1] =   0.00002435992186
+ bl[2] =   0.00015749856580  cl[2] =   0.00007116962558
+ bl[3] =   0.00023808853089  cl[3] =   0.00016030785309
+ bl[4] =   0.00036164667410  cl[4] =   0.00032293661022
+ bl[5] =   0.00055301083698  cl[5] =   0.00061591079057
+ bl[6] =   0.00084986117323  cl[6] =   0.00114166155222
+ bl[7] =   0.00131024178030  cl[7] =   0.00208402972847
+ bl[8] =   0.00202396588837  cl[8] =   0.00377261686386
+ bl[9] =   0.00313025787302  cl[9] =   0.00679828083360
+ bl[10] =   0.00484526988298  cl[10] =   0.01222057339337
+ bl[11] =   0.00750534986468  cl[11] =   0.02194099565272
+ bl[12] =   0.01163592723560  cl[12] =   0.03937693462576
+ bl[13] =   0.01806347660377  cl[13] =   0.07068600944290
+ bl[14] =   0.02810378720452  cl[14] =   0.12701460315533
+ bl[15] =   0.04389578285954  cl[15] =   0.22870584345400
+ bl[16] =   0.06904060857227  cl[16] =   0.41343057490355
+ bl[17] =   0.10995526950618  cl[17] =   0.75274525655458
+ bl[18] =   0.17911259203450  cl[18] =   1.38869050356521
+ bl[19] =   0.30398882322004  cl[19] =   2.62507012406034
+ bl[20] =   0.55655938498635  cl[20] =   5.19733227478844
+ bl[21] =   1.17800877200640  cl[21] =  11.28890648691669
+ bl[22] =   3.37411755498268  cl[22] =  30.14342817672962
+ bl[23] =  21.69898570182433  cl[23] = 146.85001112854857
+Action_F_alt_Rational_Ratio<AField<double,QXS> >: building denominator operator for generating pseudo fermion.
+AFopr_Rational<AField<double,QXS> >:
+  Np        = 24
+  n_exp     = 1
+  d_exp     = 4
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+AShiftsolver_CG<AField<double,QXS> >:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = 1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+ a0     =   5.58036852400570
+ bl[0] =  -0.00000017893342  cl[0] =   0.00000680966921
+ bl[1] =  -0.00000066035113  cl[1] =   0.00003317472698
+ bl[2] =  -0.00000164378409  cl[2] =   0.00008858253908
+ bl[3] =  -0.00000366395849  cl[3] =   0.00019240640142
+ bl[4] =  -0.00000784469021  cl[4] =   0.00038094220449
+ bl[5] =  -0.00001651639222  cl[5] =   0.00072010285764
+ bl[6] =  -0.00003450801613  cl[6] =   0.00132847067622
+ bl[7] =  -0.00007182893516  cl[7] =   0.00241878579066
+ bl[8] =  -0.00014923417080  cl[8] =   0.00437242872721
+ bl[9] =  -0.00030978296853  cl[9] =   0.00787311045469
+ bl[10] =  -0.00064288665697  cl[10] =   0.01414707108070
+ bl[11] =  -0.00133449572696  cl[11] =   0.02539557762695
+ bl[12] =  -0.00277241525010  cl[12] =   0.04557678310628
+ bl[13] =  -0.00576945519668  cl[13] =   0.08182922092203
+ bl[14] =  -0.01204430970414  cl[14] =   0.14709601213560
+ bl[15] =  -0.02528819229117  cl[15] =   0.26506799817940
+ bl[16] =  -0.05364677560727  cl[16] =   0.47983960417564
+ bl[17] =  -0.11595066330893  cl[17] =   0.87591633269729
+ bl[18] =  -0.25923761437870  cl[18] =   1.62361175563714
+ bl[19] =  -0.61666586749312  cl[19] =   3.09658294646239
+ bl[20] =  -1.64751311111600  cl[20] =   6.23799758235386
+ bl[21] =  -5.52951755776276  cl[21] =  14.05093804990128
+ bl[22] = -30.70905886604810  cl[22] =  41.05103479856729
+ bl[23] = -820.26774197588713  cl[23] = 285.13899386830889
+AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  2  Nyv   = 4
+  VLEN  =  8  Nst2v = 256
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+AForce_F_Domainwall_5din_eo<AField<double,QXS> >: construction
+  ShiftAField_eo<AField<double,QXS> >: being constructed.
+    Nin = 144
+    VLENX = 4  VLENY = 2
+    Nx2  = 8  Nvol2 = 2048
+    Nx2v = 2  Nyv  = 4
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    do_comm[0] = 1
+    do_comm[1] = 1
+    do_comm[2] = 1
+    do_comm[3] = 1
+  ShiftAField_eo<AField<double,QXS> >: construction finished.
+  AForce_F_Domainwall_5din_eo<AField<double,QXS> >: parameters:
+    gamma-matrix type = Dirac
+    mq   =   0.00050000
+    M0   =   1.00000000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+    b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+    b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+    b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+    b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+    b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+    b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+    b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+    b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+    b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+    b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+    b[10] =     1.5000000000  c[10] =     0.5000000000
+    b[11] =     1.5000000000  c[11] =     0.5000000000
+  AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+    VLENX =  4  Nx2v  = 2
+    VLENY =  2  Nyv   = 4
+    VLEN  =  8  Nst2v = 256
+    do_comm[0] = 1
+    do_comm[1] = 1
+    do_comm[2] = 1
+    do_comm[3] = 1
+    Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+      mq   =   0.0005
+      M0   =   1.0000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients b =     1.5000000000  c =     0.5000000000
+  AForce_F_Domainwall_5din<AField<double,QXS> >: construction
+    ShiftAField_lex<AField<double,QXS> >: construction
+      Nin = 144
+      VLENX = 4  Nxv  = 4
+      VLENY = 2  Nyv  = 4
+      VLEN  = 8  Nstv = 512
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      do_comm[0] = 1
+      do_comm[1] = 1
+      do_comm[2] = 1
+      do_comm[3] = 1
+    ShiftAField_lex<AField<double,QXS> >: construction finished.
+    AForce_F_Domainwall_5din<AField<double,QXS> >: parameters:
+      gamma-matrix type = Dirac
+      mq   =   0.00050000
+      M0   =   1.00000000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,QXS> >: construction
+      VLENX =  4  Nxv  = 4
+      VLENY =  2  Nyv  = 4
+      VLEN  =  8  Nstv = 512
+      do_comm[0] = 1
+      do_comm[1] = 1
+      do_comm[2] = 1
+      do_comm[3] = 1
+      Parameters of AFopr_Domainwall_5din<AField<double,QXS> >:
+        mq   =   0.0005
+        M0   =   1.0000
+        Ns   =   12
+        boundary[0] =  1
+        boundary[1] =  1
+        boundary[2] =  1
+        boundary[3] = -1
+        coefficients b =     1.5000000000  c =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,QXS> >: construction finished.
+  AForce_F_Domainwall_5din<AField<double,QXS> >: construction finished.
+AForce_F_Domainwall_5din_eo<AField<double,QXS> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  2  Nyv   = 4
+  VLEN  =  8  Nst2v = 256
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+AForce_F_Domainwall_5din_eo<AField<double,QXS> >: construction
+  ShiftAField_eo<AField<double,QXS> >: being constructed.
+    Nin = 144
+    VLENX = 4  VLENY = 2
+    Nx2  = 8  Nvol2 = 2048
+    Nx2v = 2  Nyv  = 4
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    do_comm[0] = 1
+    do_comm[1] = 1
+    do_comm[2] = 1
+    do_comm[3] = 1
+  ShiftAField_eo<AField<double,QXS> >: construction finished.
+  AForce_F_Domainwall_5din_eo<AField<double,QXS> >: parameters:
+    gamma-matrix type = Dirac
+    mq   =   0.00200000
+    M0   =   1.00000000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+    b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+    b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+    b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+    b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+    b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+    b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+    b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+    b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+    b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+    b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+    b[10] =     1.5000000000  c[10] =     0.5000000000
+    b[11] =     1.5000000000  c[11] =     0.5000000000
+  AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+    VLENX =  4  Nx2v  = 2
+    VLENY =  2  Nyv   = 4
+    VLEN  =  8  Nst2v = 256
+    do_comm[0] = 1
+    do_comm[1] = 1
+    do_comm[2] = 1
+    do_comm[3] = 1
+    Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+      mq   =   0.0020
+      M0   =   1.0000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients b =     1.5000000000  c =     0.5000000000
+  AForce_F_Domainwall_5din<AField<double,QXS> >: construction
+    ShiftAField_lex<AField<double,QXS> >: construction
+      Nin = 144
+      VLENX = 4  Nxv  = 4
+      VLENY = 2  Nyv  = 4
+      VLEN  = 8  Nstv = 512
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      do_comm[0] = 1
+      do_comm[1] = 1
+      do_comm[2] = 1
+      do_comm[3] = 1
+    ShiftAField_lex<AField<double,QXS> >: construction finished.
+    AForce_F_Domainwall_5din<AField<double,QXS> >: parameters:
+      gamma-matrix type = Dirac
+      mq   =   0.00200000
+      M0   =   1.00000000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,QXS> >: construction
+      VLENX =  4  Nxv  = 4
+      VLENY =  2  Nyv  = 4
+      VLEN  =  8  Nstv = 512
+      do_comm[0] = 1
+      do_comm[1] = 1
+      do_comm[2] = 1
+      do_comm[3] = 1
+      Parameters of AFopr_Domainwall_5din<AField<double,QXS> >:
+        mq   =   0.0020
+        M0   =   1.0000
+        Ns   =   12
+        boundary[0] =  1
+        boundary[1] =  1
+        boundary[2] =  1
+        boundary[3] = -1
+        coefficients b =     1.5000000000  c =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,QXS> >: construction finished.
+  AForce_F_Domainwall_5din<AField<double,QXS> >: construction finished.
+AForce_F_Domainwall_5din_eo<AField<double,QXS> >: construction finished.
+AFopr_Smeared_alt<AField<double,QXS> >: construction
+AFopr_Smeared_alt<AField<double,QXS> >: construction finished.
+AFopr_Smeared_alt<AField<double,QXS> >: construction
+AFopr_Smeared_alt<AField<double,QXS> >: construction finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  2  Nyv   = 4
+  VLEN  =  8  Nst2v = 256
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+AFopr_Smeared_alt<AField<double,QXS> >: construction
+AFopr_Smeared_alt<AField<double,QXS> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  4  Nyv   = 2
+  VLEN  = 16  Nst2v = 128
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<float,QXS> >:
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+ASolver_CG<Afield<float,QXS> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: setup finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  2  Nyv   = 4
+  VLEN  =  8  Nst2v = 256
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+AFopr_Smeared_alt<AField<double,QXS> >: construction
+AFopr_Smeared_alt<AField<double,QXS> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  4  Nyv   = 2
+  VLEN  = 16  Nst2v = 128
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<float,QXS> >:
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+ASolver_CG<Afield<float,QXS> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: setup finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  2  Nyv   = 4
+  VLEN  =  8  Nst2v = 256
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+AFopr_Smeared_alt<AField<double,QXS> >: construction
+AFopr_Smeared_alt<AField<double,QXS> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  4  Nyv   = 2
+  VLEN  = 16  Nst2v = 128
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<float,QXS> >:
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+ASolver_CG<Afield<float,QXS> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: setup finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  2  Nyv   = 4
+  VLEN  =  8  Nst2v = 256
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+AFopr_Smeared_alt<AField<double,QXS> >: construction
+AFopr_Smeared_alt<AField<double,QXS> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  4  Nyv   = 2
+  VLEN  = 16  Nst2v = 128
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<float,QXS> >:
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+ASolver_CG<Afield<float,QXS> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: setup finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  2  Nyv   = 4
+  VLEN  =  8  Nst2v = 256
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<double,QXS> >:
+    mq   =   1.0000
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+AFopr_Smeared_alt<AField<double,QXS> >: construction
+AFopr_Smeared_alt<AField<double,QXS> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,QXS> >: construction
+  VLENX =  4  Nx2v  = 2
+  VLENY =  4  Nyv   = 2
+  VLEN  = 16  Nst2v = 128
+  do_comm[0] = 1
+  do_comm[1] = 1
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters of AFopr_Domainwall_5din_eo<AField<float,QXS> >:
+    mq   =   1.0000
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients b =     1.5000000000  c =     0.5000000000
+ASolver_CG<Afield<float,QXS> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,QXS>, AField<float,QXS> >: setup finished.
+AForce_F_Ratio_eo<AField<double,QXS> >: construction
+AForce_F_Ratio_eo<AField<double,QXS> >: construction finished.
+AForce_F_Ratio_eo<AField<double,QXS> >: construction
+AForce_F_Ratio_eo<AField<double,QXS> >: construction finished.
+Builder_Integrator:
+  Integrator = Omelyan
+   level     =  0:  Nstep =    2
+   level     =  1:  Nstep =    1
+   level     =  2:  Nstep =    3
+  Nprec      =    8
+Integrator_UpdateU:
+  Nprec    = 8
+Integrator_Omelyan:
+  Level:    2
+  Nstep    =    3
+  lambda_Omelyan =   0.193183
+Integrator_Omelyan:
+  Level:    1
+  Nstep    =    1
+  lambda_Omelyan =   0.193183
+Integrator_Omelyan:
+  Level:    0
+  Nstep    =    2
+  lambda_Omelyan =   0.193183
+HMC_General:
+  Number of actions:    4
+  traj_length     = 0.100000
+  Metropolis_test = false
+Object construction finished.
+HMC: Ntraj = 1
+
+---------------------------------------------------
+traj = 0
+RandomNumbers_parallel<RancomNumbers_Mseries>: init with 200000
+ Random number init: ndelay =    200000
+HMC (general) start.
+Langevin step.
+  Kinetic term:
+    H_kin        =   3143703.69440221
+    H_kin/dof    =         0.49967825
+  Action_F_alt_Rational_Ratio<AField<double,QXS> >: 
+    Shift solver in rational function
+      Number of shift values = 24
+      diff(max) =  1.037031675287722e-14  
+      elapsed time:     7.034750 [sec]
+    Shift solver in rational function
+      Number of shift values = 24
+      diff(max) =  8.230279575103481e-15  
+      elapsed time:     0.793073 [sec]
+    H_Frational  =  14155830.10879725
+    H_F/dof      =         0.50000191
+    elapsed time:     7.917530 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  1.025269421858737e-31
+    Fprop_H_prec:      4 3.201982857322532e-16
+    H_Fratio     =  14151728.82867203
+    H_F/dof      =         0.49985705
+    elapsed time:     3.153274 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  1.053814853688884e-31
+    Fprop_H:      4    3.2463e-16    0.0000e+00 [GFlops]
+      elapsed time:     2.991402 [sec]
+    H_Fratio     =  14151728.82867203
+    H_F/dof      =         0.49985705
+    elapsed time:     2.997197 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  4.299390204855265e-32
+    Fprop_H_prec:      4 2.073497095453781e-16
+    H_Fratio     =  14147832.74280002
+    H_F/dof      =         0.49971943
+    elapsed time:     0.357211 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  9.040473128975187e-32
+    Fprop_H:      4    3.0067e-16    0.0000e+00 [GFlops]
+      elapsed time:     3.097586 [sec]
+    H_Fratio     =  14147832.74280002
+    H_F/dof      =         0.49971943
+    elapsed time:     3.103177 [sec]
+  Action_G_Rectangle: 
+    Plaquette    =         0.62512995
+    H_Grectangle =   2580085.85166040
+    H_G/dof      =         2.18716588
+  H_total(init)  =  48179181.2263319045
+plaq = 6.2512994697494162e-01
+  plaq(init)     =       0.625129946975
+Integration level-0 start.
+  Action_F_alt_Rational_Ratio<AField<double,QXS> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.871054962334579e-14  
+      elapsed time:     0.607213 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 708  
+      diff(max) =  9.698944946965392e-14  
+      elapsed time:     5.521781 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.739248257635789e-14  
+      elapsed time:     0.585684 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.308489 [sec]
+    Fave =     0.107972  Fmax =     0.370713  Fdev =     0.033199
+    elapsed time:     9.035495 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  1.053814853688884e-31
+    Fprop_MD:      4 3.246251459281742e-16
+      elapsed time:     2.996701 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.280059 [sec]
+    Fave =     0.000297  Fmax =     0.001537  Fdev =     0.000096
+    elapsed time:     4.324796 [sec]
+Integration level-1 start.
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  9.040473128975187e-32
+    Fprop_MD:      4 3.006737954823331e-16
+      elapsed time:     3.092671 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274538 [sec]
+    Fave =     0.254173  Fmax =     0.965184  Fdev =     0.078297
+    elapsed time:     4.415070 [sec]
+Integration level-2 start.
+  Action_G_Rectangle: 
+    Fave =     7.466279  Fmax =    12.788770  Fdev =     1.676718
+    elapsed time:     0.189171 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.466312  Fmax =    12.836189  Fdev =     1.676715
+    elapsed time:     0.189455 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.466309  Fmax =    12.882888  Fdev =     1.676730
+    elapsed time:     0.189076 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.466385  Fmax =    12.928965  Fdev =     1.676777
+    elapsed time:     0.189400 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.466424  Fmax =    12.974305  Fdev =     1.676842
+    elapsed time:     0.189671 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.466542  Fmax =    13.019008  Fdev =     1.676938
+    elapsed time:     0.189320 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.466623  Fmax =    13.062958  Fdev =     1.677051
+    elapsed time:     0.189721 [sec]
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  8.624296550470763e-32
+    Fprop_MD:      4 2.936715265474466e-16
+      elapsed time:     3.063042 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274353 [sec]
+    Fave =     0.253399  Fmax =     0.961942  Fdev =     0.078111
+    elapsed time:     4.495648 [sec]
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.466784  Fmax =    13.106265  Fdev =     1.677196
+    elapsed time:     0.189824 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.466907  Fmax =    13.148805  Fdev =     1.677358
+    elapsed time:     0.189240 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.467110  Fmax =    13.190680  Fdev =     1.677551
+    elapsed time:     0.189153 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.467275  Fmax =    13.231774  Fdev =     1.677761
+    elapsed time:     0.188930 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.467519  Fmax =    13.272190  Fdev =     1.678001
+    elapsed time:     0.189272 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.467726  Fmax =    13.311812  Fdev =     1.678257
+    elapsed time:     0.189491 [sec]
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  8.688485398682061e-32
+    Fprop_MD:      4 2.947623686748711e-16
+      elapsed time:     3.076342 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274073 [sec]
+    Fave =     0.252131  Fmax =     0.945786  Fdev =     0.077766
+    elapsed time:     4.508803 [sec]
+Integration level-1 finished.
+  Action_F_alt_Rational_Ratio<AField<double,QXS> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.881783555883575e-14  
+      elapsed time:     0.578368 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 709  
+      diff(max) =  9.940936305802130e-14  
+      elapsed time:     5.489753 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.741343775451651e-14  
+      elapsed time:     0.584474 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.273713 [sec]
+    Fave =     0.108004  Fmax =     0.371954  Fdev =     0.033223
+    elapsed time:     8.937270 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  1.145905203788552e-31
+    Fprop_MD:      4 3.385122159964914e-16
+      elapsed time:     3.042637 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274705 [sec]
+    Fave =     0.000297  Fmax =     0.001571  Fdev =     0.000096
+    elapsed time:     4.365313 [sec]
+Integration level-1 start.
+Integrator_UpdateP: returns previous force.
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.468012  Fmax =    13.350745  Fdev =     1.678543
+    elapsed time:     0.189386 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.468260  Fmax =    13.388872  Fdev =     1.678844
+    elapsed time:     0.189344 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.468588  Fmax =    13.426300  Fdev =     1.679173
+    elapsed time:     0.189538 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.468878  Fmax =    13.462913  Fdev =     1.679517
+    elapsed time:     0.189054 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.469246  Fmax =    13.498817  Fdev =     1.679889
+    elapsed time:     0.189595 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.469577  Fmax =    13.533896  Fdev =     1.680274
+    elapsed time:     0.188259 [sec]
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  9.143979032491534e-32
+    Fprop_MD:      4 3.023901293443874e-16
+      elapsed time:     3.096133 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274720 [sec]
+    Fave =     0.251030  Fmax =     0.921871  Fdev =     0.077503
+    elapsed time:     4.529162 [sec]
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.469987  Fmax =    13.568268  Fdev =     1.680687
+    elapsed time:     0.189185 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.470358  Fmax =    13.601806  Fdev =     1.681111
+    elapsed time:     0.189034 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.470808  Fmax =    13.634620  Fdev =     1.681561
+    elapsed time:     0.189008 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.471219  Fmax =    13.666591  Fdev =     1.682021
+    elapsed time:     0.189413 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.471709  Fmax =    13.697832  Fdev =     1.682507
+    elapsed time:     0.188874 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.472161  Fmax =    13.728225  Fdev =     1.683001
+    elapsed time:     0.188954 [sec]
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  9.108569259191152e-32
+    Fprop_MD:      4 3.018040632461921e-16
+      elapsed time:     3.112807 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274288 [sec]
+    Fave =     0.249737  Fmax =     0.905399  Fdev =     0.077143
+    elapsed time:     4.545583 [sec]
+Integration level-1 finished.
+  Action_F_alt_Rational_Ratio<AField<double,QXS> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.901109792389929e-14  
+      elapsed time:     0.578363 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 723  
+      diff(max) =  9.968887795801688e-14  
+      elapsed time:     5.583751 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.744472867802378e-14  
+      elapsed time:     0.585675 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274314 [sec]
+    Fave =     0.108031  Fmax =     0.371608  Fdev =     0.033242
+    elapsed time:     9.033744 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  1.097775091633945e-31
+    Fprop_MD:      4 3.313268916997147e-16
+      elapsed time:     3.043523 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274474 [sec]
+    Fave =     0.000297  Fmax =     0.001596  Fdev =     0.000096
+    elapsed time:     4.366371 [sec]
+Integration level-1 start.
+Integrator_UpdateP: returns previous force.
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.472691  Fmax =    13.757883  Fdev =     1.683519
+    elapsed time:     0.189679 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.473181  Fmax =    13.786686  Fdev =     1.684046
+    elapsed time:     0.189235 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.473750  Fmax =    13.814748  Fdev =     1.684594
+    elapsed time:     0.189411 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.474280  Fmax =    13.841950  Fdev =     1.685148
+    elapsed time:     0.189115 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.474888  Fmax =    13.868407  Fdev =     1.685723
+    elapsed time:     0.189590 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.475456  Fmax =    13.893999  Fdev =     1.686304
+    elapsed time:     0.189295 [sec]
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  9.362574321281487e-32
+    Fprop_MD:      4 3.059832400848368e-16
+      elapsed time:     3.105854 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.276869 [sec]
+    Fave =     0.248909  Fmax =     0.930979  Fdev =     0.076935
+    elapsed time:     4.541216 [sec]
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.476102  Fmax =    13.918851  Fdev =     1.686903
+    elapsed time:     0.189590 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.476707  Fmax =    13.942836  Fdev =     1.687506
+    elapsed time:     0.189135 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.477390  Fmax =    13.966069  Fdev =     1.688127
+    elapsed time:     0.189235 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.478033  Fmax =    13.988431  Fdev =     1.688750
+    elapsed time:     0.189297 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.478753  Fmax =    14.010039  Fdev =     1.689389
+    elapsed time:     0.189133 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.479432  Fmax =    14.030775  Fdev =     1.690029
+    elapsed time:     0.188923 [sec]
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  8.433966405508642e-32
+    Fprop_MD:      4 2.904129199176346e-16
+      elapsed time:     3.108641 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274255 [sec]
+    Fave =     0.248259  Fmax =     0.953638  Fdev =     0.076752
+    elapsed time:     4.541328 [sec]
+Integration level-1 finished.
+  Action_F_alt_Rational_Ratio<AField<double,QXS> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.929490368332145e-14  
+      elapsed time:     0.577531 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 742  
+      diff(max) =  9.837726823655578e-14  
+      elapsed time:     5.715336 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.749107502416687e-14  
+      elapsed time:     0.585070 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274444 [sec]
+    Fave =     0.108086  Fmax =     0.369855  Fdev =     0.033270
+    elapsed time:     9.164143 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  9.749069747484606e-32
+    Fprop_MD:      4 3.122350036028088e-16
+      elapsed time:     3.088113 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.275496 [sec]
+    Fave =     0.000298  Fmax =     0.001612  Fdev =     0.000096
+    elapsed time:     4.411360 [sec]
+Integration level-1 start.
+Integrator_UpdateP: returns previous force.
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.480188  Fmax =    14.050757  Fdev =     1.690684
+    elapsed time:     0.189766 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.480903  Fmax =    14.069865  Fdev =     1.691338
+    elapsed time:     0.189149 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.481693  Fmax =    14.088216  Fdev =     1.692005
+    elapsed time:     0.189505 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.482442  Fmax =    14.105694  Fdev =     1.692670
+    elapsed time:     0.189262 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.483267  Fmax =    14.122414  Fdev =     1.693348
+    elapsed time:     0.189737 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.484050  Fmax =    14.138261  Fdev =     1.694021
+    elapsed time:     0.189231 [sec]
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  7.909494681407345e-32
+    Fprop_MD:      4 2.812382385346514e-16
+      elapsed time:     3.100927 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274527 [sec]
+    Fave =     0.248307  Fmax =     0.968320  Fdev =     0.076828
+    elapsed time:     4.534043 [sec]
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.484908  Fmax =    14.153361  Fdev =     1.694706
+    elapsed time:     0.189488 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.485723  Fmax =    14.167588  Fdev =     1.695385
+    elapsed time:     0.189194 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.486613  Fmax =    14.181059  Fdev =     1.696074
+    elapsed time:     0.188146 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.487460  Fmax =    14.193658  Fdev =     1.696757
+    elapsed time:     0.189260 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.488381  Fmax =    14.205503  Fdev =     1.697447
+    elapsed time:     0.188848 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.489258  Fmax =    14.216479  Fdev =     1.698131
+    elapsed time:     0.189484 [sec]
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  8.127500011054431e-32
+    Fprop_MD:      4 2.850877059968464e-16
+      elapsed time:     3.092844 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274725 [sec]
+    Fave =     0.248687  Fmax =     0.971564  Fdev =     0.077021
+    elapsed time:     4.526008 [sec]
+Integration level-1 finished.
+  Action_F_alt_Rational_Ratio<AField<double,QXS> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.967502511349036e-14  
+      elapsed time:     0.577436 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 743  
+      diff(max) =  9.763780075426618e-14  
+      elapsed time:     5.721257 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.754785252228416e-14  
+      elapsed time:     0.585363 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.274765 [sec]
+    Fave =     0.108134  Fmax =     0.366721  Fdev =     0.033293
+    elapsed time:     9.174011 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  9.633300091247040e-32
+    Fprop_MD:      4 3.103755804061756e-16
+      elapsed time:     3.113332 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     1.275093 [sec]
+    Fave =     0.000298  Fmax =     0.001618  Fdev =     0.000096
+    elapsed time:     4.436747 [sec]
+Integration level-0 finished.
+Hamiltonian calculation.
+  Kinetic term:
+    H_kin        =   3127947.10720041
+    H_kin/dof    =         0.49717380
+  Action_F_alt_Rational_Ratio<AField<double,QXS> >: 
+    Shift solver in rational function
+      Number of shift values = 24
+      diff(max) =  9.328164006445460e-15  
+      elapsed time:     0.793023 [sec]
+    Shift solver in rational function
+      Number of shift values = 24
+      diff(max) =  9.836916401356866e-15  
+      elapsed time:     6.743035 [sec]
+    H_Frational  =  14155822.72332084
+    H_F/dof      =         0.50000165
+    elapsed time:     7.540415 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  9.633300091247040e-32
+    Fprop_H:      4    3.1038e-16    0.0000e+00 [GFlops]
+      elapsed time:     3.105791 [sec]
+    H_Fratio     =  14151728.87294021
+    H_F/dof      =         0.49985705
+    elapsed time:     3.111870 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,QXS> >: 
+Richardson  nconv = 4, diff2 =  8.127500011054431e-32
+    Fprop_H:      4    2.8509e-16    0.0000e+00 [GFlops]
+      elapsed time:     3.095675 [sec]
+    H_Fratio     =  14147848.97352537
+    H_F/dof      =         0.49972001
+    elapsed time:     3.100588 [sec]
+  Action_G_Rectangle: 
+    Plaquette    =         0.62315109
+    H_Grectangle =   2595833.60571309
+    H_G/dof      =         2.20051541
+  H_total(trial) =  48179181.2826999128
+plaq = 6.2315109358989851e-01
+  plaq(trial)    =       0.623151093590
+Metropolis test.
+  H(diff)       =     0.05636801
+  exp(-diff_H)  =     0.94519123
+  Random number =    -1.00000000
+  Accepted
+plaq = 6.2315109358989851e-01
+  plaq(final)    =       0.623151093590
+Elapsed time: each trajectory: total       162.07 sec, count    1, average       162.07 sec
+Elapsed time: update_Nf2p1_eo: total       162.74 sec, count    1, average       162.74 sec
+Elapsed time: Main: total       163.43 sec, count    1, average       163.43 sec
+Timer: timestamp: 2023/09/27 02:00:03 +0900

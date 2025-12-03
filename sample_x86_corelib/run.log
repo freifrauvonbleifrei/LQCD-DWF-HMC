@@ -1,0 +1,1077 @@
+Bridge++ 2.0.0
+
+Timer: timestamp: 2023/09/26 22:27:31 +0900
+file = main.yaml
+Main: input parameters
+  lattice_size     = [8, 8, 8, 8]
+  grid_size        = [1, 1, 2, 2]
+  number of thread = 8
+  number of color  = 3
+  logfile          = stdout
+  ildg_logfile     = stdout
+  vlevel           = General
+
+Lattice parameters:
+  Lx = 8,  Ly = 8,  Lz = 8,  Lt = 8,
+  Nx = 8,  Ny = 8,  Nz = 4,  Nt = 4,
+  NPEx = 1,  NPEy  = 1,  NPEz  = 2,  NPEt  = 2,
+  Lvol = 4096,  Nvol = 1024,  NPE = 4,
+  Ndim = 4
+  Nc   = 3
+  Nd   = 4
+
+ThreadManager: initialization
+Warning at ThreadManager: Nthread(env) != Nthread(input)
+  Number of threads(env)   = 36
+  Number of threads(input) = 8
+  reset Nthread = Nthread(input).
+  Number of threads = 8
+file = HMC_DWF_Nf2p1_eo.yaml
+parameter setup finished.
+  gconf_status   = Continue
+  gconf_read     = Text_4x4x4x8
+  readfile       = ../conf_04040408.txt
+  gconf_write    = Binary_Parallel
+  writefile      = ./conf_output.dat
+  rand_type      = Mseries_parallel
+  seed           = 1234567
+  i_conf         = 200000
+  Ntraj          = 1
+  i_save_conf    = 1
+  vlevel         = General
+  gmset_type     = Dirac
+  solver_MD_type = CG
+  solver_H_type  = CG
+
+parameter output finished.
+RandomNumbers_parallel<RancomNumbers_Mseries>: init with 1234567
+ Random number init: ndelay =   1234567
+gauge config. finished
+fermion type in params_nf1: Domainwall_5din_eo
+fermion type in params_pv: Domainwall_5din_eo
+fermion type in params_nf2: Domainwall_5din_eo
+Force_G_Rectangle:
+  beta   =     4.170000
+  c_plaq =     1.666667
+  c_rect =    -0.083333
+Action_G_Rectangle:
+  beta   =     4.170000
+  c_plaq =     1.666667
+  c_rect =    -0.083333
+Force_G_Rectangle:
+  beta   =     4.170000
+  c_plaq =     1.666667
+  c_rect =    -0.083333
+Smear_APE:
+  rho =   0.1000
+ForceSmear_APE:
+  rho =   0.1000
+Director_Smear:
+  Nsmear = 3
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   0.0200
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   0.0200
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   1.0000
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   1.0000
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Parameters: fetch_string: key 'verbose_level' not found.
+Force_F_Rational_Ratio:
+  numerator operator
+    Np        = 16
+    n_exp     = 1
+    d_exp     = 4
+    x_min     =   0.01000000
+    x_max     =   3.16227766
+    Niter     = 1000
+    Stop_cond = 1.00e-26
+  denominator operator
+    Np        = 16
+    n_exp     = -1
+    d_exp     = 2
+    x_min     =   0.01000000
+    x_max     =   3.16227766
+    Niter     = 1000
+    Stop_cond = 1.00e-26
+ Rational parameters for the numerator
+Math_Rational:
+  Np    = 16
+  n_exp = 1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4_16_0.00010000_010.000
+Math_Rational: read parameter file successful.
+    a0 =   4.57941845320953
+    bl[0] =  -0.00000050983819  cl[0] =   0.00001541945699
+    bl[1] =  -0.00000226565368  cl[1] =   0.00008222429586
+    bl[2] =  -0.00000737587916  cl[2] =   0.00025423469902
+    bl[3] =  -0.00002244379612  cl[3] =   0.00066851974673
+    bl[4] =  -0.00006696251426  cl[4] =   0.00165522785884
+    bl[5] =  -0.00019845177735  cl[5] =   0.00400088471266
+    bl[6] =  -0.00058680212916  cl[6] =   0.00957644066560
+    bl[7] =  -0.00173476126841  cl[7] =   0.02283574868512
+    bl[8] =  -0.00513669924215  cl[8] =   0.05440826509924
+    bl[9] =  -0.01528126404314  cl[9] =   0.12981835017351
+    bl[10] =  -0.04598618774044  cl[10] =   0.31125427782992
+    bl[11] =  -0.14226362717754  cl[11] =   0.75547621578472
+    bl[12] =  -0.47044826563223  cl[12] =   1.88981397554475
+    bl[13] =  -1.83391984985299  cl[13] =   5.10227449349711
+    bl[14] = -11.05482924186415  cl[14] =  17.03788547913311
+    bl[15] = -304.12794449872860  cl[15] = 127.53317210340374
+ Rational parameters for the denominator
+Math_Rational:
+  Np    = 16
+  n_exp = -1
+  d_exp = 2
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_2inv_16_0.00010000_010.000
+Math_Rational: read parameter file successful.
+    a0 =   0.04357455874902
+    bl[0] =   0.00282070650275  cl[0] =   0.00000475858062
+    bl[1] =   0.00335761706103  cl[1] =   0.00004843428854
+    bl[2] =   0.00453365623760  cl[2] =   0.00017062242193
+    bl[3] =   0.00657275784926  cl[3] =   0.00046878602726
+    bl[4] =   0.00986335809253  cl[4] =   0.00118077351012
+    bl[5] =   0.01503293025124  cl[5] =   0.00287465409126
+    bl[6] =   0.02306961589643  cl[6] =   0.00690253148740
+    bl[7] =   0.03551836857467  cl[7] =   0.01648306377175
+    bl[8] =   0.05480463506181  cl[8] =   0.03929177192481
+    bl[9] =   0.08480523623249  cl[9] =   0.09371414992944
+    bl[10] =   0.13199271589603  cl[10] =   0.22425829465375
+    bl[11] =   0.20821196594718  cl[11] =   0.54138651391597
+    bl[12] =   0.33910302840678  cl[12] =   1.33555573351964
+    bl[13] =   0.59661735791449  cl[13] =   3.47735242210966
+    bl[14] =   1.27429135976300  cl[14] =  10.45314918776314
+    bl[15] =   4.78650336630183  cl[15] =  50.15020875501467
+Shiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-26
+Shiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-26
+Parameters: fetch_string: key 'verbose_level' not found.
+Action_F_Rational_Ratio_eo: building denominator operator for calcH.
+Fopr_Rational:
+  Np        = 24
+  n_exp     = -1
+  d_exp     = 2
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Shiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = -1
+  d_exp = 2
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_2inv_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+ a0     =   0.02934613140240
+ bl[0] =   0.00187576679788  cl[0] =   0.00000214000828
+ bl[1] =   0.00203633502198  cl[1] =   0.00002037488057
+ bl[2] =   0.00237121836286  cl[2] =   0.00006322198169
+ bl[3] =   0.00290908918827  cl[3] =   0.00014566655704
+ bl[4] =   0.00369600490003  cl[4] =   0.00029654318558
+ bl[5] =   0.00479936325229  cl[5] =   0.00056862227745
+ bl[6] =   0.00631370244568  cl[6] =   0.00105707259692
+ bl[7] =   0.00836886764079  cl[7] =   0.00193276774344
+ bl[8] =   0.01114130334107  cl[8] =   0.00350212037642
+ bl[9] =   0.01486958324782  cl[9] =   0.00631448417863
+ bl[10] =   0.01987585513521  cl[10] =   0.01135505225290
+ bl[11] =   0.02659587370200  cl[11] =   0.02039189443111
+ bl[12] =   0.03562220994587  cl[12] =   0.03660230121775
+ bl[13] =   0.04776921724364  cl[13] =   0.06570973474538
+ bl[14] =   0.06417720681615  cl[14] =   0.11806865537925
+ bl[15] =   0.08649407465009  cl[15] =   0.21255547951159
+ bl[16] =   0.11722380048163  cl[16] =   0.38405194453901
+ bl[17] =   0.16046468281443  cl[17] =   0.69856907701489
+ bl[18] =   0.22363665533168  cl[18] =   1.28629108814655
+ bl[19] =   0.32198831168678  cl[19] =   2.42262971750200
+ bl[20] =   0.49212775554847  cl[20] =   4.76241703548965
+ bl[21] =   0.84205174655561  cl[21] =  10.19313608358920
+ bl[22] =   1.81315707830627  cl[22] =  26.29456200366866
+ bl[23] =   7.00020418565486  cl[23] = 114.37433163365502
+Action_F_Rational_Ratio_eo: building numerator operator for calcH.
+Fopr_Rational:
+  Np        = 24
+  n_exp     = 1
+  d_exp     = 4
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Shiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = 1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+ a0     =   5.58036852400570
+ bl[0] =  -0.00000017893342  cl[0] =   0.00000680966921
+ bl[1] =  -0.00000066035113  cl[1] =   0.00003317472698
+ bl[2] =  -0.00000164378409  cl[2] =   0.00008858253908
+ bl[3] =  -0.00000366395849  cl[3] =   0.00019240640142
+ bl[4] =  -0.00000784469021  cl[4] =   0.00038094220449
+ bl[5] =  -0.00001651639222  cl[5] =   0.00072010285764
+ bl[6] =  -0.00003450801613  cl[6] =   0.00132847067622
+ bl[7] =  -0.00007182893516  cl[7] =   0.00241878579066
+ bl[8] =  -0.00014923417080  cl[8] =   0.00437242872721
+ bl[9] =  -0.00030978296853  cl[9] =   0.00787311045469
+ bl[10] =  -0.00064288665697  cl[10] =   0.01414707108070
+ bl[11] =  -0.00133449572696  cl[11] =   0.02539557762695
+ bl[12] =  -0.00277241525010  cl[12] =   0.04557678310628
+ bl[13] =  -0.00576945519668  cl[13] =   0.08182922092203
+ bl[14] =  -0.01204430970414  cl[14] =   0.14709601213560
+ bl[15] =  -0.02528819229117  cl[15] =   0.26506799817940
+ bl[16] =  -0.05364677560727  cl[16] =   0.47983960417564
+ bl[17] =  -0.11595066330893  cl[17] =   0.87591633269729
+ bl[18] =  -0.25923761437870  cl[18] =   1.62361175563714
+ bl[19] =  -0.61666586749312  cl[19] =   3.09658294646239
+ bl[20] =  -1.64751311111600  cl[20] =   6.23799758235386
+ bl[21] =  -5.52951755776276  cl[21] =  14.05093804990128
+ bl[22] = -30.70905886604810  cl[22] =  41.05103479856729
+ bl[23] = -820.26774197588713  cl[23] = 285.13899386830889
+Action_F_Rational_Ratio_eo: building denominator operator for generating pseudo fermion.
+Fopr_Rational:
+  Np        = 24
+  n_exp     = 1
+  d_exp     = 4
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Shiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = 1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+ a0     =   5.58036852400570
+ bl[0] =  -0.00000017893342  cl[0] =   0.00000680966921
+ bl[1] =  -0.00000066035113  cl[1] =   0.00003317472698
+ bl[2] =  -0.00000164378409  cl[2] =   0.00008858253908
+ bl[3] =  -0.00000366395849  cl[3] =   0.00019240640142
+ bl[4] =  -0.00000784469021  cl[4] =   0.00038094220449
+ bl[5] =  -0.00001651639222  cl[5] =   0.00072010285764
+ bl[6] =  -0.00003450801613  cl[6] =   0.00132847067622
+ bl[7] =  -0.00007182893516  cl[7] =   0.00241878579066
+ bl[8] =  -0.00014923417080  cl[8] =   0.00437242872721
+ bl[9] =  -0.00030978296853  cl[9] =   0.00787311045469
+ bl[10] =  -0.00064288665697  cl[10] =   0.01414707108070
+ bl[11] =  -0.00133449572696  cl[11] =   0.02539557762695
+ bl[12] =  -0.00277241525010  cl[12] =   0.04557678310628
+ bl[13] =  -0.00576945519668  cl[13] =   0.08182922092203
+ bl[14] =  -0.01204430970414  cl[14] =   0.14709601213560
+ bl[15] =  -0.02528819229117  cl[15] =   0.26506799817940
+ bl[16] =  -0.05364677560727  cl[16] =   0.47983960417564
+ bl[17] =  -0.11595066330893  cl[17] =   0.87591633269729
+ bl[18] =  -0.25923761437870  cl[18] =   1.62361175563714
+ bl[19] =  -0.61666586749312  cl[19] =   3.09658294646239
+ bl[20] =  -1.64751311111600  cl[20] =   6.23799758235386
+ bl[21] =  -5.52951755776276  cl[21] =  14.05093804990128
+ bl[22] = -30.70905886604810  cl[22] =  41.05103479856729
+ bl[23] = -820.26774197588713  cl[23] = 285.13899386830889
+Action_F_Rational_Ratio_eo: building numerator operator for generating pseudo fermion.
+Fopr_Rational:
+  Np        = 24
+  n_exp     = -1
+  d_exp     = 4
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Shiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = -1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4inv_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+ a0     =   0.17919963452202
+ bl[0] =   0.00005673386972  cl[0] =   0.00000350706154
+ bl[1] =   0.00010247508534  cl[1] =   0.00002435992186
+ bl[2] =   0.00015749856580  cl[2] =   0.00007116962558
+ bl[3] =   0.00023808853089  cl[3] =   0.00016030785309
+ bl[4] =   0.00036164667410  cl[4] =   0.00032293661022
+ bl[5] =   0.00055301083698  cl[5] =   0.00061591079057
+ bl[6] =   0.00084986117323  cl[6] =   0.00114166155222
+ bl[7] =   0.00131024178030  cl[7] =   0.00208402972847
+ bl[8] =   0.00202396588837  cl[8] =   0.00377261686386
+ bl[9] =   0.00313025787302  cl[9] =   0.00679828083360
+ bl[10] =   0.00484526988298  cl[10] =   0.01222057339337
+ bl[11] =   0.00750534986468  cl[11] =   0.02194099565272
+ bl[12] =   0.01163592723560  cl[12] =   0.03937693462576
+ bl[13] =   0.01806347660377  cl[13] =   0.07068600944290
+ bl[14] =   0.02810378720452  cl[14] =   0.12701460315533
+ bl[15] =   0.04389578285954  cl[15] =   0.22870584345400
+ bl[16] =   0.06904060857227  cl[16] =   0.41343057490355
+ bl[17] =   0.10995526950618  cl[17] =   0.75274525655458
+ bl[18] =   0.17911259203450  cl[18] =   1.38869050356521
+ bl[19] =   0.30398882322004  cl[19] =   2.62507012406034
+ bl[20] =   0.55655938498635  cl[20] =   5.19733227478844
+ bl[21] =   1.17800877200640  cl[21] =  11.28890648691669
+ bl[22] =   3.37411755498268  cl[22] =  30.14342817672962
+ bl[23] =  21.69898570182433  cl[23] = 146.85001112854857
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   0.0005
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   0.0005
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   0.0020
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   0.0020
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   1.0000
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Fopr_Domainwall_eo: Initialization start
+Imp::Fopr_Wilson_eo: construction
+  Imp::Fopr_Wilson_eo: input parameters
+    gamma matrix type = Dirac
+    kappa =   0.16666667
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+Imp::Fopr_Wilson_eo: construction finished.
+Parameters of Fopr_Domainwall_eo:
+   mq   =   1.0000
+   M0   =   1.0000
+   Ns   =   12
+   boundary[0] =  1
+   boundary[1] =  1
+   boundary[2] =  1
+   boundary[3] = -1
+  coefficients:
+  b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+  b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+  b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+  b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+  b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+  b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+  b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+  b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+  b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+  b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+  b[10] =     1.5000000000  c[10] =     0.5000000000
+  b[11] =     1.5000000000  c[11] =     0.5000000000
+Solver_CG:
+  Niter          = 100
+  Nrestart       = 40
+  Stop_cond      = 1.00e-28
+  use_init_guess = false
+Solver_CG:
+  Niter          = 100
+  Nrestart       = 40
+  Stop_cond      = 1.00e-28
+  use_init_guess = false
+Solver_CG:
+  Niter          = 100
+  Nrestart       = 40
+  Stop_cond      = 1.00e-28
+  use_init_guess = false
+Solver_CG:
+  Niter          = 100
+  Nrestart       = 40
+  Stop_cond      = 1.00e-28
+  use_init_guess = false
+Solver_CG:
+  Niter          = 100
+  Nrestart       = 40
+  Stop_cond      = 1.00e-28
+  use_init_guess = false
+Action_F_Ratio_eo:
+Action_F_Ratio_eo:
+Builder_Integrator:
+  Integrator = Omelyan
+   level     =  0:  Nstep =    2
+   level     =  1:  Nstep =    1
+   level     =  2:  Nstep =    3
+  Nprec      =    8
+Integrator_UpdateU:
+  Nprec    = 8
+Integrator_Omelyan:
+  Level:    2
+  Nstep    =    3
+  lambda_Omelyan =   0.193183
+Integrator_Omelyan:
+  Level:    1
+  Nstep    =    1
+  lambda_Omelyan =   0.193183
+Integrator_Omelyan:
+  Level:    0
+  Nstep    =    2
+  lambda_Omelyan =   0.193183
+HMC_General:
+  Number of actions:    4
+  traj_length     = 0.100000
+  Metropolis_test = false
+Object construction finished.
+HMC: Ntraj = 1
+
+---------------------------------------------------
+traj = 0
+RandomNumbers_parallel<RancomNumbers_Mseries>: init with 200000
+ Random number init: ndelay =    200000
+HMC (general) start.
+Langevin step.
+  Kinetic term:
+    H_kin        =     65441.12395221
+    H_kin/dof    =         0.49927615
+  Action_F_Rational_Ratio_eo: 
+    Shift solver in rational function
+      Number of shift values = 24
+      diff(max) =  7.853367428507397e-15  
+      elapsed time:     5.364975 [sec]
+    Shift solver in rational function
+      Number of shift values = 24
+      diff(max) =  7.994891495263484e-15  
+      elapsed time:     2.303477 [sec]
+    H_Fstandard  =    295484.46306446
+    H_F/dof      =         0.50097057
+  Action_F_Ratio_eo: 
+    Nconv = 438  diff  = 9.26437118e-15
+    H_Fratio     =    294138.90932114
+    H_F/dof      =         0.49868929
+  Action_F_Ratio_eo: 
+    Nconv = 108  diff  = 7.93117071e-15
+    H_Fratio     =    294669.14772989
+    H_F/dof      =         0.49958826
+  Action_G_Rectangle: 
+    Plaquette    =         0.62512995
+    H_Grectangle =     53751.78857626
+    H_G/dof      =         2.18716588
+  H_total(init)  =   1003485.4326439592
+plaq = 6.2512994697494162e-01
+  plaq(init)     =       0.625129946975
+Integration level-0 start.
+  Action_F_Rational_Ratio_eo: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 50  
+      diff(max) =  8.340583139146732e-14  
+Elapsed time: shiftsolver, 1st numerator: total         0.75 sec, count    1, average         0.75 sec
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 153  
+      diff(max) =  9.656365301771158e-14  
+Elapsed time: shiftsolver, denominator: total         1.75 sec, count    1, average         1.75 sec
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 51  
+      diff(max) =  9.047492273252405e-14  
+Elapsed time: shiftsolver, 2nd numerator: total         0.73 sec, count    1, average         0.73 sec
+    Fstandard_ave =     0.102898  Fstandard_max =     0.330150  Fstandard_dev =     0.031360
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    438  diff  = 9.210224e-15
+    Fratio_ave =     0.000280  Fratio_max =     0.000831  Fratio_dev =     0.000087
+Integration level-1 start.
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    442  diff  = 9.087115e-15
+    Fratio_ave =     0.229491  Fratio_max =     0.643389  Fratio_dev =     0.069505
+Integration level-2 start.
+  Action_G_Rectangle: 
+    Fave =     7.466279  Fmax =    12.788770  Fdev =     1.676718
+    elapsed time:     0.016886 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.466841  Fmax =    12.819465  Fdev =     1.676784
+    elapsed time:     0.016981 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.467359  Fmax =    12.849411  Fdev =     1.676862
+    elapsed time:     0.016736 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.467951  Fmax =    12.878718  Fdev =     1.676965
+    elapsed time:     0.016775 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.468498  Fmax =    12.907290  Fdev =     1.677080
+    elapsed time:     0.016800 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.469118  Fmax =    12.935234  Fdev =     1.677220
+    elapsed time:     0.016900 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.469693  Fmax =    12.962457  Fdev =     1.677371
+    elapsed time:     0.016779 [sec]
+Integration level-2 finished.
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    442  diff  = 9.380917e-15
+    Fratio_ave =     0.229244  Fratio_max =     0.641088  Fratio_dev =     0.069350
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.470339  Fmax =    12.989065  Fdev =     1.677547
+    elapsed time:     0.016931 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.470940  Fmax =    13.014967  Fdev =     1.677734
+    elapsed time:     0.016822 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.471613  Fmax =    13.040267  Fdev =     1.677945
+    elapsed time:     0.016987 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.472239  Fmax =    13.064879  Fdev =     1.678167
+    elapsed time:     0.017014 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.472936  Fmax =    13.088902  Fdev =     1.678412
+    elapsed time:     0.016839 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.473586  Fmax =    13.112252  Fdev =     1.678667
+    elapsed time:     0.016980 [sec]
+Integration level-2 finished.
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    442  diff  = 9.740069e-15
+    Fratio_ave =     0.229295  Fratio_max =     0.637890  Fratio_dev =     0.069327
+Integration level-1 finished.
+  Action_F_Rational_Ratio_eo: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 50  
+      diff(max) =  8.059449293887109e-14  
+Elapsed time: shiftsolver, 1st numerator: total         0.71 sec, count    1, average         0.71 sec
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 153  
+      diff(max) =  9.621932368323721e-14  
+Elapsed time: shiftsolver, denominator: total         1.70 sec, count    1, average         1.70 sec
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 50  
+      diff(max) =  9.678013005102781e-14  
+Elapsed time: shiftsolver, 2nd numerator: total         0.70 sec, count    1, average         0.70 sec
+    Fstandard_ave =     0.102599  Fstandard_max =     0.327819  Fstandard_dev =     0.031222
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    438  diff  = 9.656990e-15
+    Fratio_ave =     0.000280  Fratio_max =     0.000850  Fratio_dev =     0.000087
+Integration level-1 start.
+Integrator_UpdateP: returns previous force.
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.474307  Fmax =    13.135024  Fdev =     1.678945
+    elapsed time:     0.016884 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.474980  Fmax =    13.157139  Fdev =     1.679232
+    elapsed time:     0.016828 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.475722  Fmax =    13.178696  Fdev =     1.679541
+    elapsed time:     0.016786 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.476417  Fmax =    13.199614  Fdev =     1.679859
+    elapsed time:     0.016800 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.477181  Fmax =    13.219989  Fdev =     1.680197
+    elapsed time:     0.016788 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.477896  Fmax =    13.239742  Fdev =     1.680543
+    elapsed time:     0.016932 [sec]
+Integration level-2 finished.
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    444  diff  = 9.676703e-15
+    Fratio_ave =     0.229743  Fratio_max =     0.642398  Fratio_dev =     0.069470
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.478680  Fmax =    13.258966  Fdev =     1.680910
+    elapsed time:     0.017060 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.479414  Fmax =    13.277586  Fdev =     1.681282
+    elapsed time:     0.016875 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.480217  Fmax =    13.295694  Fdev =     1.681674
+    elapsed time:     0.016817 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.480970  Fmax =    13.313215  Fdev =     1.682071
+    elapsed time:     0.016810 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.481790  Fmax =    13.330239  Fdev =     1.682487
+    elapsed time:     0.016812 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.482560  Fmax =    13.346694  Fdev =     1.682906
+    elapsed time:     0.016787 [sec]
+Integration level-2 finished.
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    446  diff  = 9.850003e-15
+    Fratio_ave =     0.230506  Fratio_max =     0.652737  Fratio_dev =     0.069747
+Integration level-1 finished.
+  Action_F_Rational_Ratio_eo: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 50  
+      diff(max) =  9.181959190027003e-14  
+Elapsed time: shiftsolver, 1st numerator: total         0.70 sec, count    1, average         0.70 sec
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 153  
+      diff(max) =  9.584258075319538e-14  
+Elapsed time: shiftsolver, denominator: total         1.71 sec, count    1, average         1.71 sec
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 50  
+      diff(max) =  8.997959494448881e-14  
+Elapsed time: shiftsolver, 2nd numerator: total         0.70 sec, count    1, average         0.70 sec
+    Fstandard_ave =     0.102308  Fstandard_max =     0.323602  Fstandard_dev =     0.031099
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    440  diff  = 8.899586e-15
+    Fratio_ave =     0.000280  Fratio_max =     0.000869  Fratio_dev =     0.000087
+Integration level-1 start.
+Integrator_UpdateP: returns previous force.
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.483398  Fmax =    13.362664  Fdev =     1.683343
+    elapsed time:     0.016833 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.484184  Fmax =    13.378083  Fdev =     1.683782
+    elapsed time:     0.016819 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.485037  Fmax =    13.393034  Fdev =     1.684237
+    elapsed time:     0.016778 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.485839  Fmax =    13.407452  Fdev =     1.684694
+    elapsed time:     0.016942 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.486707  Fmax =    13.421418  Fdev =     1.685166
+    elapsed time:     0.016792 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.487523  Fmax =    13.434867  Fdev =     1.685637
+    elapsed time:     0.016837 [sec]
+Integration level-2 finished.
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    458  diff  = 9.906744e-15
+    Fratio_ave =     0.231655  Fratio_max =     0.662885  Fratio_dev =     0.070178
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.488405  Fmax =    13.447877  Fdev =     1.686123
+    elapsed time:     0.016840 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.489234  Fmax =    13.460388  Fdev =     1.686607
+    elapsed time:     0.016827 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.490129  Fmax =    13.472475  Fdev =     1.687103
+    elapsed time:     0.016769 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.490971  Fmax =    13.484078  Fdev =     1.687597
+    elapsed time:     0.016802 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.491877  Fmax =    13.495271  Fdev =     1.688103
+    elapsed time:     0.016952 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.492731  Fmax =    13.505997  Fdev =     1.688604
+    elapsed time:     0.016831 [sec]
+Integration level-2 finished.
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    460  diff  = 9.291552e-15
+    Fratio_ave =     0.233086  Fratio_max =     0.672332  Fratio_dev =     0.070719
+Integration level-1 finished.
+  Action_F_Rational_Ratio_eo: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 50  
+      diff(max) =  9.041675939132463e-14  
+Elapsed time: shiftsolver, 1st numerator: total         0.70 sec, count    1, average         0.70 sec
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 153  
+      diff(max) =  9.546656720433571e-14  
+Elapsed time: shiftsolver, denominator: total         1.70 sec, count    1, average         1.70 sec
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 50  
+      diff(max) =  8.979769216163622e-14  
+Elapsed time: shiftsolver, 2nd numerator: total         0.70 sec, count    1, average         0.70 sec
+    Fstandard_ave =     0.102051  Fstandard_max =     0.317604  Fstandard_dev =     0.031002
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    440  diff  = 9.236583e-15
+    Fratio_ave =     0.000280  Fratio_max =     0.000887  Fratio_dev =     0.000087
+Integration level-1 start.
+Integrator_UpdateP: returns previous force.
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.493648  Fmax =    13.516322  Fdev =     1.689115
+    elapsed time:     0.016850 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.494512  Fmax =    13.526193  Fdev =     1.689622
+    elapsed time:     0.016752 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.495440  Fmax =    13.535682  Fdev =     1.690137
+    elapsed time:     0.016778 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.496314  Fmax =    13.544731  Fdev =     1.690645
+    elapsed time:     0.016750 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.497251  Fmax =    13.553410  Fdev =     1.691162
+    elapsed time:     0.016770 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.498134  Fmax =    13.561663  Fdev =     1.691671
+    elapsed time:     0.016769 [sec]
+Integration level-2 finished.
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    460  diff  = 9.791193e-15
+    Fratio_ave =     0.234856  Fratio_max =     0.681197  Fratio_dev =     0.071381
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+  Action_G_Rectangle: 
+    Fave =     7.499079  Fmax =    13.569556  Fdev =     1.692186
+    elapsed time:     0.016870 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.499970  Fmax =    13.577037  Fdev =     1.692693
+    elapsed time:     0.017233 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.500923  Fmax =    13.584169  Fdev =     1.693206
+    elapsed time:     0.016811 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.501820  Fmax =    13.590901  Fdev =     1.693708
+    elapsed time:     0.016808 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.502779  Fmax =    13.597295  Fdev =     1.694216
+    elapsed time:     0.016795 [sec]
+  Action_G_Rectangle: 
+    Fave =     7.503683  Fmax =    13.603300  Fdev =     1.694713
+    elapsed time:     0.016823 [sec]
+Integration level-2 finished.
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    462  diff  = 8.522985e-15
+    Fratio_ave =     0.236826  Fratio_max =     0.688869  Fratio_dev =     0.072107
+Integration level-1 finished.
+  Action_F_Rational_Ratio_eo: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 49  
+      diff(max) =  9.348335098751784e-14  
+Elapsed time: shiftsolver, 1st numerator: total         0.69 sec, count    1, average         0.69 sec
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 153  
+      diff(max) =  9.509354826911592e-14  
+Elapsed time: shiftsolver, denominator: total         1.70 sec, count    1, average         1.70 sec
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 50  
+      diff(max) =  8.965710451335035e-14  
+Elapsed time: shiftsolver, 2nd numerator: total         0.70 sec, count    1, average         0.70 sec
+    Fstandard_ave =     0.101820  Fstandard_max =     0.309848  Fstandard_dev =     0.030924
+  Action_F_Ratio_eo: 
+    Solver: Nconv =    440  diff  = 9.548371e-15
+    Fratio_ave =     0.000280  Fratio_max =     0.000903  Fratio_dev =     0.000087
+Integration level-0 finished.
+Hamiltonian calculation.
+  Kinetic term:
+    H_kin        =     65059.59956559
+    H_kin/dof    =         0.49636535
+  Action_F_Rational_Ratio_eo: 
+    Shift solver in rational function
+      Number of shift values = 24
+      diff(max) =  8.611129687176289e-15  
+      elapsed time:     2.248959 [sec]
+    Shift solver in rational function
+      Number of shift values = 24
+      diff(max) =  9.079667221454395e-15  
+      elapsed time:     5.381881 [sec]
+    H_Fstandard  =    295482.62670055
+    H_F/dof      =         0.50096745
+  Action_F_Ratio_eo: 
+    Nconv = 440  diff  = 9.54837098e-15
+    H_Fratio     =    294138.90757152
+    H_F/dof      =         0.49868928
+  Action_F_Ratio_eo: 
+    Nconv = 462  diff  = 8.52298476e-15
+    H_Fratio     =    294676.43314841
+    H_F/dof      =         0.49960062
+  Action_G_Rectangle: 
+    Plaquette    =         0.62291619
+    H_Grectangle =     54127.86649783
+    H_G/dof      =         2.20246853
+  H_total(trial) =   1003485.4334839012
+plaq = 6.2291618857404063e-01
+  plaq(trial)    =       0.622916188574
+Metropolis test.
+  H(diff)       =     0.00083994
+  exp(-diff_H)  =     0.99916041
+  Random number =    -1.00000000
+  Accepted
+plaq = 6.2291618857404063e-01
+  plaq(final)    =       0.622916188574
+Elapsed time: each trajectory: total        80.17 sec, count    1, average        80.17 sec
+Elapsed time: update_Nf2p1_eo: total        80.18 sec, count    1, average        80.18 sec
+Elapsed time: Main: total        80.29 sec, count    1, average        80.29 sec
+Timer: timestamp: 2023/09/26 22:28:52 +0900

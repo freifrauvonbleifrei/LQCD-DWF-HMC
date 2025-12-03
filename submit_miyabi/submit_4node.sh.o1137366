@@ -1,0 +1,2186 @@
+Currently Loaded Modulefiles:
+ 1) nvidia/25.9(default)   2) nv-hpcx/25.9  
+
+Key:
+(symbolic-version)  
+OMP_NUM_THREAD: 2
+-rwxr-x--- 1 x10295 xg24i061 130495048 Dec  3 16:53 ../benchmark_hmc_dwf/hmc_dwf_eo.elf
+Bridge++ 2.1.0
+
+Timer: timestamp: 2025/12/03 17:30:54 +0900
+file = main.yaml
+Main: input parameters
+  lattice_size     = [32, 16, 16, 24]
+  grid_size        = [1, 1, 2, 2]
+  number of thread = 2
+  number of color  = 3
+  logfile          = stdout
+  vlevel           = General
+
+Lattice parameters:
+  Lx = 32,  Ly = 16,  Lz = 16,  Lt = 24,
+  Nx = 32,  Ny = 16,  Nz = 8,  Nt = 12,
+  NPEx = 1,  NPEy  = 1,  NPEz  = 2,  NPEt  = 2,
+  Lvol = 196608,  Nvol = 49152,  NPE = 4,
+  Ndim = 4
+  Nc   = 3
+  Nd   = 4
+
+ThreadManager: initialization
+  Number of threads = 2
+Alt_Accel code is being setup.
+DeviceManager_OpenACC: being initialized.
+  process_id = 0
+  NVIDIA environment is used.
+  number of devices = 1
+  device_id = 0  is used on process = 0
+------------------------------------------------
+Alt_Accel: Factory entries
+------------------------------------------------
+AFopr<double, ACCEL> >(void):
+AFopr<double, ACCEL>(Parameters&):
+	Clover
+	CloverTerm
+	Clover_eo
+	Domainwall
+	Domainwall_5din
+	Domainwall_5din_eo
+	Domainwall_eo
+	Staggered
+	Staggered_eo
+	Wilson
+	Wilson_eo
+AFopr<double, ACCEL>(Fopr*):
+	Domainwall
+	Rational
+AFopr<double, ACCEL>(Fopr*, Director*):
+	Smeared
+	Smeared_alt
+AFopr<float, ACCEL> >(void):
+AFopr<float, ACCEL>(Parameters&):
+	Clover
+	CloverTerm
+	Clover_eo
+	Domainwall
+	Domainwall_5din
+	Domainwall_5din_eo
+	Domainwall_eo
+	Staggered
+	Staggered_eo
+	Wilson
+	Wilson_eo
+AFopr<float, ACCEL>(Fopr*):
+	Domainwall
+AFopr<float, ACCEL>(Fopr*, Director*):
+	Smeared
+	Smeared_alt
+AEigensolver<AField<float, ACCEL> >, Afopr>(Fopr*):
+------------------------------------------------
+bridge_alt_init finished.
+file = HMC_DWF_Nf2p1_eo.yaml
+parameter setup finished.
+  gconf_status   = Continue
+  gconf_read     = Text_4x4x4x8
+  readfile       = ../conf_04040408.txt
+  gconf_write    = Binary_Parallel
+  writefile      = ./conf_output.dat
+  rand_type      = Mseries_parallel
+  seed           = 1234567
+  i_conf         = 200000
+  Ntraj          = 1
+  i_save_conf    = 1
+  vlevel         = General
+  gmset_type     = Dirac
+  solver_MD_type = CG
+  solver_H_type  = CG
+
+parameter output finished.
+RandomNumbers_parallel<RancomNumbers_Mseries>: init with 1234567
+ Random number init: ndelay =   1234567
+gauge config. finished
+fermion type in params_nf1: Domainwall_5din_eo
+fermion type in params_pv: Domainwall_5din_eo
+fermion type in params_nf2: Domainwall_5din_eo
+Force_G_Rectangle:
+  beta   =     4.170000
+  c_plaq =     1.666667
+  c_rect =    -0.083333
+Action_G_Rectangle:
+  beta   =     4.170000
+  c_plaq =     1.666667
+  c_rect =    -0.083333
+Force_G_Rectangle:
+  beta   =     4.170000
+  c_plaq =     1.666667
+  c_rect =    -0.083333
+Director_alt_Smear<AField<double,ACCEL> >: construction
+  smear_type   = APE
+  projection_type = Stout_SU3
+    ASmear_APE<AField<double,ACCEL> >: parameters
+      rho =   0.1000
+    ShiftAField_lex<AField<double, ACCEL> >: being constructed.
+      Nin = 18
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] =  1
+      do_comm[0] = 0
+      do_comm[1] = 0
+      do_comm[2] = 1
+      do_comm[3] = 1
+    ShiftAField_lex<AField<double, ACCEL> >: construction finished.
+  ASmear_APE<AField<double,ACCEL> >: construction finished
+  Nsmear = 3
+  ShiftAField_lex<AField<double, ACCEL> >: being constructed.
+    Nin = 18
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] =  1
+    do_comm[0] = 0
+    do_comm[1] = 0
+    do_comm[2] = 1
+    do_comm[3] = 1
+  ShiftAField_lex<AField<double, ACCEL> >: construction finished.
+  AforceSmear_APE<AField<double,ACCEL> >:
+    rho =   0.1000
+  verbose_level = General
+Director_alt_Smear<AField<double,ACCEL> >: construction finished
+AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   1.0000
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: parameters:
+    gamma-matrix type = Dirac
+    mq   =   1.00000000
+    M0   =   1.00000000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+    b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+    b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+    b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+    b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+    b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+    b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+    b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+    b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+    b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+    b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+    b[10] =     1.5000000000  c[10] =     0.5000000000
+    b[11] =     1.5000000000  c[11] =     0.5000000000
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+    Parameters: fetch_int: key 'require_communication' not found.
+    req_comm = 0 (default)
+    do_comm[0] = 0
+    do_comm[1] = 0
+    do_comm[2] = 1
+    do_comm[3] = 1
+    Parameters: fetch_string: key 'code_implementation' not found.
+      code_implementation is not given
+    Parameters: fetch_double: key 'parameter_alpha' not found.
+      parameter alpha is not provided: set to 1.0.
+    AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+      gamma matrix repr.:  Dirac
+      code implementation: 5d
+      mq   =   1.0000
+      M0   =   1.0000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+        b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+        b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+        b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+        b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+        b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+        b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+        b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+        b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+        b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+        b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+        b[10] =     1.5000000000  c[10] =     0.5000000000
+        b[11] =     1.5000000000  c[11] =     0.5000000000
+      alpha =   1.0000
+  AForce_F_Domainwall_5din<AField<double,ACCEL> >: construction
+    ShiftAField_lex<AField<double, ACCEL> >: being constructed.
+      Nin = 144
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      do_comm[0] = 0
+      do_comm[1] = 0
+      do_comm[2] = 1
+      do_comm[3] = 1
+    ShiftAField_lex<AField<double, ACCEL> >: construction finished.
+    AForce_F_Domainwall_5din<AField<double,ACCEL> >: parameters:
+      gamma-matrix type = Dirac
+      mq   =   1.00000000
+      M0   =   1.00000000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,ACCEL> >: construction
+      Parameters: fetch_int: key 'require_communication' not found.
+      req_comm = 0 (default)
+      do_comm[0] = 0
+      do_comm[1] = 0
+      do_comm[2] = 1
+      do_comm[3] = 1
+      Parameters: fetch_string: key 'code_implementation' not found.
+        code_implementation is not given
+      Parameters: fetch_double: key 'parameter_alpha' not found.
+        parameter alpha is not provided: set to 1.0.
+      AFopr_Domainwall_5din<AField<double,ACCEL> >: input parameters
+        mq   =   1.0000
+        M0   =   1.0000
+        Ns   =   12
+        boundary[0] =  1
+        boundary[1] =  1
+        boundary[2] =  1
+        boundary[3] = -1
+        coefficients:
+          b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+          b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+          b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+          b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+          b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+          b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+          b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+          b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+          b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+          b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+          b[10] =     1.5000000000  c[10] =     0.5000000000
+          b[11] =     1.5000000000  c[11] =     0.5000000000
+        alpha =   1.0000
+    AFopr_Domainwall_5din<AField<double,ACCEL> >: construction finished.
+  AForce_F_Domainwall_5din<AField<double,ACCEL> >: construction finished.
+AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: construction finished.
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0200
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: parameters:
+    gamma-matrix type = Dirac
+    mq   =   0.02000000
+    M0   =   1.00000000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+    b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+    b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+    b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+    b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+    b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+    b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+    b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+    b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+    b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+    b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+    b[10] =     1.5000000000  c[10] =     0.5000000000
+    b[11] =     1.5000000000  c[11] =     0.5000000000
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+    Parameters: fetch_int: key 'require_communication' not found.
+    req_comm = 0 (default)
+    do_comm[0] = 0
+    do_comm[1] = 0
+    do_comm[2] = 1
+    do_comm[3] = 1
+    Parameters: fetch_string: key 'code_implementation' not found.
+      code_implementation is not given
+    Parameters: fetch_double: key 'parameter_alpha' not found.
+      parameter alpha is not provided: set to 1.0.
+    AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+      gamma matrix repr.:  Dirac
+      code implementation: 5d
+      mq   =   0.0200
+      M0   =   1.0000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+        b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+        b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+        b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+        b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+        b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+        b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+        b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+        b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+        b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+        b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+        b[10] =     1.5000000000  c[10] =     0.5000000000
+        b[11] =     1.5000000000  c[11] =     0.5000000000
+      alpha =   1.0000
+  AForce_F_Domainwall_5din<AField<double,ACCEL> >: construction
+    ShiftAField_lex<AField<double, ACCEL> >: being constructed.
+      Nin = 144
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      do_comm[0] = 0
+      do_comm[1] = 0
+      do_comm[2] = 1
+      do_comm[3] = 1
+    ShiftAField_lex<AField<double, ACCEL> >: construction finished.
+    AForce_F_Domainwall_5din<AField<double,ACCEL> >: parameters:
+      gamma-matrix type = Dirac
+      mq   =   0.02000000
+      M0   =   1.00000000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,ACCEL> >: construction
+      Parameters: fetch_int: key 'require_communication' not found.
+      req_comm = 0 (default)
+      do_comm[0] = 0
+      do_comm[1] = 0
+      do_comm[2] = 1
+      do_comm[3] = 1
+      Parameters: fetch_string: key 'code_implementation' not found.
+        code_implementation is not given
+      Parameters: fetch_double: key 'parameter_alpha' not found.
+        parameter alpha is not provided: set to 1.0.
+      AFopr_Domainwall_5din<AField<double,ACCEL> >: input parameters
+        mq   =   0.0200
+        M0   =   1.0000
+        Ns   =   12
+        boundary[0] =  1
+        boundary[1] =  1
+        boundary[2] =  1
+        boundary[3] = -1
+        coefficients:
+          b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+          b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+          b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+          b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+          b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+          b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+          b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+          b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+          b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+          b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+          b[10] =     1.5000000000  c[10] =     0.5000000000
+          b[11] =     1.5000000000  c[11] =     0.5000000000
+        alpha =   1.0000
+    AFopr_Domainwall_5din<AField<double,ACCEL> >: construction finished.
+  AForce_F_Domainwall_5din<AField<double,ACCEL> >: construction finished.
+AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: construction finished.
+Parameters: fetch_string: key 'verbose_level' not found.
+AForce_F_Rational_Ratio<AField<double,ACCEL> >: construction
+  Parameters: fetch_string: key 'verbose_level' not found.
+   Rational parameters for the numerator (fopr1)
+  Math_Rational:
+    Np    = 16
+    n_exp = 1
+    d_exp = 4
+    x_min =   0.000100
+    x_max =  10.000000
+  Math_Rational: expected filename: parameter_rational.1_4_16_0.00010000_010.000
+  Math_Rational: read parameter file successful.
+      a0 =   4.57941845320953
+      bl[0] =  -0.00000050983819  cl[0] =   0.00001541945699
+      bl[1] =  -0.00000226565368  cl[1] =   0.00008222429586
+      bl[2] =  -0.00000737587916  cl[2] =   0.00025423469902
+      bl[3] =  -0.00002244379612  cl[3] =   0.00066851974673
+      bl[4] =  -0.00006696251426  cl[4] =   0.00165522785884
+      bl[5] =  -0.00019845177735  cl[5] =   0.00400088471266
+      bl[6] =  -0.00058680212916  cl[6] =   0.00957644066560
+      bl[7] =  -0.00173476126841  cl[7] =   0.02283574868512
+      bl[8] =  -0.00513669924215  cl[8] =   0.05440826509924
+      bl[9] =  -0.01528126404314  cl[9] =   0.12981835017351
+      bl[10] =  -0.04598618774044  cl[10] =   0.31125427782992
+      bl[11] =  -0.14226362717754  cl[11] =   0.75547621578472
+      bl[12] =  -0.47044826563223  cl[12] =   1.88981397554475
+      bl[13] =  -1.83391984985299  cl[13] =   5.10227449349711
+      bl[14] = -11.05482924186415  cl[14] =  17.03788547913311
+      bl[15] = -304.12794449872860  cl[15] = 127.53317210340374
+   Rational parameters for the denominator (fopr2)
+  Math_Rational:
+    Np    = 16
+    n_exp = -1
+    d_exp = 2
+    x_min =   0.000100
+    x_max =  10.000000
+  Math_Rational: expected filename: parameter_rational.1_2inv_16_0.00010000_010.000
+  Math_Rational: read parameter file successful.
+      a0 =   0.04357455874902
+      bl[0] =   0.00282070650275  cl[0] =   0.00000475858062
+      bl[1] =   0.00335761706103  cl[1] =   0.00004843428854
+      bl[2] =   0.00453365623760  cl[2] =   0.00017062242193
+      bl[3] =   0.00657275784926  cl[3] =   0.00046878602726
+      bl[4] =   0.00986335809253  cl[4] =   0.00118077351012
+      bl[5] =   0.01503293025124  cl[5] =   0.00287465409126
+      bl[6] =   0.02306961589643  cl[6] =   0.00690253148740
+      bl[7] =   0.03551836857467  cl[7] =   0.01648306377175
+      bl[8] =   0.05480463506181  cl[8] =   0.03929177192481
+      bl[9] =   0.08480523623249  cl[9] =   0.09371414992944
+      bl[10] =   0.13199271589603  cl[10] =   0.22425829465375
+      bl[11] =   0.20821196594718  cl[11] =   0.54138651391597
+      bl[12] =   0.33910302840678  cl[12] =   1.33555573351964
+      bl[13] =   0.59661735791449  cl[13] =   3.47735242210966
+      bl[14] =   1.27429135976300  cl[14] =  10.45314918776314
+      bl[15] =   4.78650336630183  cl[15] =  50.15020875501467
+  AShiftsolver_CG:
+    Niter     = 1000
+    Stop_cond = 1.00e-26
+  AShiftsolver_CG:
+    Niter     = 1000
+    Stop_cond = 1.00e-26
+AForce_F_Rational_Ratio<AField<double,ACCEL> >: construction finished.
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction finished.
+Parameters: get_string: key 'verbose_level' not found.
+Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: building numerator operator (fopr1) for calcH.
+AFopr_Rational<AField<double,ACCEL> >:
+  Np        = 24
+  n_exp     = 1
+  d_exp     = 4
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+AShiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = 1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+  a0     =   5.58036852400570
+  bl[0] =  -0.00000017893342  cl[0] =   0.00000680966921
+  bl[1] =  -0.00000066035113  cl[1] =   0.00003317472698
+  bl[2] =  -0.00000164378409  cl[2] =   0.00008858253908
+  bl[3] =  -0.00000366395849  cl[3] =   0.00019240640142
+  bl[4] =  -0.00000784469021  cl[4] =   0.00038094220449
+  bl[5] =  -0.00001651639222  cl[5] =   0.00072010285764
+  bl[6] =  -0.00003450801613  cl[6] =   0.00132847067622
+  bl[7] =  -0.00007182893516  cl[7] =   0.00241878579066
+  bl[8] =  -0.00014923417080  cl[8] =   0.00437242872721
+  bl[9] =  -0.00030978296853  cl[9] =   0.00787311045469
+  bl[10] =  -0.00064288665697  cl[10] =   0.01414707108070
+  bl[11] =  -0.00133449572696  cl[11] =   0.02539557762695
+  bl[12] =  -0.00277241525010  cl[12] =   0.04557678310628
+  bl[13] =  -0.00576945519668  cl[13] =   0.08182922092203
+  bl[14] =  -0.01204430970414  cl[14] =   0.14709601213560
+  bl[15] =  -0.02528819229117  cl[15] =   0.26506799817940
+  bl[16] =  -0.05364677560727  cl[16] =   0.47983960417564
+  bl[17] =  -0.11595066330893  cl[17] =   0.87591633269729
+  bl[18] =  -0.25923761437870  cl[18] =   1.62361175563714
+  bl[19] =  -0.61666586749312  cl[19] =   3.09658294646239
+  bl[20] =  -1.64751311111600  cl[20] =   6.23799758235386
+  bl[21] =  -5.52951755776276  cl[21] =  14.05093804990128
+  bl[22] = -30.70905886604810  cl[22] =  41.05103479856729
+  bl[23] = -820.26774197588713  cl[23] = 285.13899386830889
+Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: building denominator operator (fopr2) for calcH.
+AFopr_Rational<AField<double,ACCEL> >:
+  Np        = 24
+  n_exp     = -1
+  d_exp     = 2
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+AShiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = -1
+  d_exp = 2
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_2inv_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+  a0     =   0.02934613140240
+  bl[0] =   0.00187576679788  cl[0] =   0.00000214000828
+  bl[1] =   0.00203633502198  cl[1] =   0.00002037488057
+  bl[2] =   0.00237121836286  cl[2] =   0.00006322198169
+  bl[3] =   0.00290908918827  cl[3] =   0.00014566655704
+  bl[4] =   0.00369600490003  cl[4] =   0.00029654318558
+  bl[5] =   0.00479936325229  cl[5] =   0.00056862227745
+  bl[6] =   0.00631370244568  cl[6] =   0.00105707259692
+  bl[7] =   0.00836886764079  cl[7] =   0.00193276774344
+  bl[8] =   0.01114130334107  cl[8] =   0.00350212037642
+  bl[9] =   0.01486958324782  cl[9] =   0.00631448417863
+  bl[10] =   0.01987585513521  cl[10] =   0.01135505225290
+  bl[11] =   0.02659587370200  cl[11] =   0.02039189443111
+  bl[12] =   0.03562220994587  cl[12] =   0.03660230121775
+  bl[13] =   0.04776921724364  cl[13] =   0.06570973474538
+  bl[14] =   0.06417720681615  cl[14] =   0.11806865537925
+  bl[15] =   0.08649407465009  cl[15] =   0.21255547951159
+  bl[16] =   0.11722380048163  cl[16] =   0.38405194453901
+  bl[17] =   0.16046468281443  cl[17] =   0.69856907701489
+  bl[18] =   0.22363665533168  cl[18] =   1.28629108814655
+  bl[19] =   0.32198831168678  cl[19] =   2.42262971750200
+  bl[20] =   0.49212775554847  cl[20] =   4.76241703548965
+  bl[21] =   0.84205174655561  cl[21] =  10.19313608358920
+  bl[22] =   1.81315707830627  cl[22] =  26.29456200366866
+  bl[23] =   7.00020418565486  cl[23] = 114.37433163365502
+Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: building numerator operator for generating pseudo fermion.
+AFopr_Rational<AField<double,ACCEL> >:
+  Np        = 24
+  n_exp     = -1
+  d_exp     = 4
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+AShiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = -1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4inv_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+  a0     =   0.17919963452202
+  bl[0] =   0.00005673386972  cl[0] =   0.00000350706154
+  bl[1] =   0.00010247508534  cl[1] =   0.00002435992186
+  bl[2] =   0.00015749856580  cl[2] =   0.00007116962558
+  bl[3] =   0.00023808853089  cl[3] =   0.00016030785309
+  bl[4] =   0.00036164667410  cl[4] =   0.00032293661022
+  bl[5] =   0.00055301083698  cl[5] =   0.00061591079057
+  bl[6] =   0.00084986117323  cl[6] =   0.00114166155222
+  bl[7] =   0.00131024178030  cl[7] =   0.00208402972847
+  bl[8] =   0.00202396588837  cl[8] =   0.00377261686386
+  bl[9] =   0.00313025787302  cl[9] =   0.00679828083360
+  bl[10] =   0.00484526988298  cl[10] =   0.01222057339337
+  bl[11] =   0.00750534986468  cl[11] =   0.02194099565272
+  bl[12] =   0.01163592723560  cl[12] =   0.03937693462576
+  bl[13] =   0.01806347660377  cl[13] =   0.07068600944290
+  bl[14] =   0.02810378720452  cl[14] =   0.12701460315533
+  bl[15] =   0.04389578285954  cl[15] =   0.22870584345400
+  bl[16] =   0.06904060857227  cl[16] =   0.41343057490355
+  bl[17] =   0.10995526950618  cl[17] =   0.75274525655458
+  bl[18] =   0.17911259203450  cl[18] =   1.38869050356521
+  bl[19] =   0.30398882322004  cl[19] =   2.62507012406034
+  bl[20] =   0.55655938498635  cl[20] =   5.19733227478844
+  bl[21] =   1.17800877200640  cl[21] =  11.28890648691669
+  bl[22] =   3.37411755498268  cl[22] =  30.14342817672962
+  bl[23] =  21.69898570182433  cl[23] = 146.85001112854857
+Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: building denominator operator for generating pseudo fermion.
+AFopr_Rational<AField<double,ACCEL> >:
+  Np        = 24
+  n_exp     = 1
+  d_exp     = 4
+  x_min     =   0.01000000
+  x_max     =   3.16227766
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+AShiftsolver_CG:
+  Niter     = 1000
+  Stop_cond = 1.00e-28
+Math_Rational:
+  Np    = 24
+  n_exp = 1
+  d_exp = 4
+  x_min =   0.000100
+  x_max =  10.000000
+Math_Rational: expected filename: parameter_rational.1_4_24_0.00010000_010.000
+Math_Rational: read parameter file successful.
+  a0     =   5.58036852400570
+  bl[0] =  -0.00000017893342  cl[0] =   0.00000680966921
+  bl[1] =  -0.00000066035113  cl[1] =   0.00003317472698
+  bl[2] =  -0.00000164378409  cl[2] =   0.00008858253908
+  bl[3] =  -0.00000366395849  cl[3] =   0.00019240640142
+  bl[4] =  -0.00000784469021  cl[4] =   0.00038094220449
+  bl[5] =  -0.00001651639222  cl[5] =   0.00072010285764
+  bl[6] =  -0.00003450801613  cl[6] =   0.00132847067622
+  bl[7] =  -0.00007182893516  cl[7] =   0.00241878579066
+  bl[8] =  -0.00014923417080  cl[8] =   0.00437242872721
+  bl[9] =  -0.00030978296853  cl[9] =   0.00787311045469
+  bl[10] =  -0.00064288665697  cl[10] =   0.01414707108070
+  bl[11] =  -0.00133449572696  cl[11] =   0.02539557762695
+  bl[12] =  -0.00277241525010  cl[12] =   0.04557678310628
+  bl[13] =  -0.00576945519668  cl[13] =   0.08182922092203
+  bl[14] =  -0.01204430970414  cl[14] =   0.14709601213560
+  bl[15] =  -0.02528819229117  cl[15] =   0.26506799817940
+  bl[16] =  -0.05364677560727  cl[16] =   0.47983960417564
+  bl[17] =  -0.11595066330893  cl[17] =   0.87591633269729
+  bl[18] =  -0.25923761437870  cl[18] =   1.62361175563714
+  bl[19] =  -0.61666586749312  cl[19] =   3.09658294646239
+  bl[20] =  -1.64751311111600  cl[20] =   6.23799758235386
+  bl[21] =  -5.52951755776276  cl[21] =  14.05093804990128
+  bl[22] = -30.70905886604810  cl[22] =  41.05103479856729
+  bl[23] = -820.26774197588713  cl[23] = 285.13899386830889
+AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: parameters:
+    gamma-matrix type = Dirac
+    mq   =   0.00050000
+    M0   =   1.00000000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+    b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+    b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+    b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+    b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+    b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+    b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+    b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+    b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+    b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+    b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+    b[10] =     1.5000000000  c[10] =     0.5000000000
+    b[11] =     1.5000000000  c[11] =     0.5000000000
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+    Parameters: fetch_int: key 'require_communication' not found.
+    req_comm = 0 (default)
+    do_comm[0] = 0
+    do_comm[1] = 0
+    do_comm[2] = 1
+    do_comm[3] = 1
+    Parameters: fetch_string: key 'code_implementation' not found.
+      code_implementation is not given
+    Parameters: fetch_double: key 'parameter_alpha' not found.
+      parameter alpha is not provided: set to 1.0.
+    AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+      gamma matrix repr.:  Dirac
+      code implementation: 5d
+      mq   =   0.0005
+      M0   =   1.0000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+        b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+        b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+        b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+        b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+        b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+        b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+        b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+        b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+        b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+        b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+        b[10] =     1.5000000000  c[10] =     0.5000000000
+        b[11] =     1.5000000000  c[11] =     0.5000000000
+      alpha =   1.0000
+  AForce_F_Domainwall_5din<AField<double,ACCEL> >: construction
+    ShiftAField_lex<AField<double, ACCEL> >: being constructed.
+      Nin = 144
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      do_comm[0] = 0
+      do_comm[1] = 0
+      do_comm[2] = 1
+      do_comm[3] = 1
+    ShiftAField_lex<AField<double, ACCEL> >: construction finished.
+    AForce_F_Domainwall_5din<AField<double,ACCEL> >: parameters:
+      gamma-matrix type = Dirac
+      mq   =   0.00050000
+      M0   =   1.00000000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,ACCEL> >: construction
+      Parameters: fetch_int: key 'require_communication' not found.
+      req_comm = 0 (default)
+      do_comm[0] = 0
+      do_comm[1] = 0
+      do_comm[2] = 1
+      do_comm[3] = 1
+      Parameters: fetch_string: key 'code_implementation' not found.
+        code_implementation is not given
+      Parameters: fetch_double: key 'parameter_alpha' not found.
+        parameter alpha is not provided: set to 1.0.
+      AFopr_Domainwall_5din<AField<double,ACCEL> >: input parameters
+        mq   =   0.0005
+        M0   =   1.0000
+        Ns   =   12
+        boundary[0] =  1
+        boundary[1] =  1
+        boundary[2] =  1
+        boundary[3] = -1
+        coefficients:
+          b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+          b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+          b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+          b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+          b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+          b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+          b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+          b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+          b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+          b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+          b[10] =     1.5000000000  c[10] =     0.5000000000
+          b[11] =     1.5000000000  c[11] =     0.5000000000
+        alpha =   1.0000
+    AFopr_Domainwall_5din<AField<double,ACCEL> >: construction finished.
+  AForce_F_Domainwall_5din<AField<double,ACCEL> >: construction finished.
+AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: parameters:
+    gamma-matrix type = Dirac
+    mq   =   0.00200000
+    M0   =   1.00000000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+    b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+    b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+    b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+    b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+    b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+    b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+    b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+    b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+    b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+    b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+    b[10] =     1.5000000000  c[10] =     0.5000000000
+    b[11] =     1.5000000000  c[11] =     0.5000000000
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+    Parameters: fetch_int: key 'require_communication' not found.
+    req_comm = 0 (default)
+    do_comm[0] = 0
+    do_comm[1] = 0
+    do_comm[2] = 1
+    do_comm[3] = 1
+    Parameters: fetch_string: key 'code_implementation' not found.
+      code_implementation is not given
+    Parameters: fetch_double: key 'parameter_alpha' not found.
+      parameter alpha is not provided: set to 1.0.
+    AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+      gamma matrix repr.:  Dirac
+      code implementation: 5d
+      mq   =   0.0020
+      M0   =   1.0000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+        b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+        b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+        b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+        b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+        b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+        b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+        b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+        b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+        b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+        b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+        b[10] =     1.5000000000  c[10] =     0.5000000000
+        b[11] =     1.5000000000  c[11] =     0.5000000000
+      alpha =   1.0000
+  AForce_F_Domainwall_5din<AField<double,ACCEL> >: construction
+    ShiftAField_lex<AField<double, ACCEL> >: being constructed.
+      Nin = 144
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      do_comm[0] = 0
+      do_comm[1] = 0
+      do_comm[2] = 1
+      do_comm[3] = 1
+    ShiftAField_lex<AField<double, ACCEL> >: construction finished.
+    AForce_F_Domainwall_5din<AField<double,ACCEL> >: parameters:
+      gamma-matrix type = Dirac
+      mq   =   0.00200000
+      M0   =   1.00000000
+      Ns   =   12
+      boundary[0] =  1
+      boundary[1] =  1
+      boundary[2] =  1
+      boundary[3] = -1
+      coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    AFopr_Domainwall_5din<AField<double,ACCEL> >: construction
+      Parameters: fetch_int: key 'require_communication' not found.
+      req_comm = 0 (default)
+      do_comm[0] = 0
+      do_comm[1] = 0
+      do_comm[2] = 1
+      do_comm[3] = 1
+      Parameters: fetch_string: key 'code_implementation' not found.
+        code_implementation is not given
+      Parameters: fetch_double: key 'parameter_alpha' not found.
+        parameter alpha is not provided: set to 1.0.
+      AFopr_Domainwall_5din<AField<double,ACCEL> >: input parameters
+        mq   =   0.0020
+        M0   =   1.0000
+        Ns   =   12
+        boundary[0] =  1
+        boundary[1] =  1
+        boundary[2] =  1
+        boundary[3] = -1
+        coefficients:
+          b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+          b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+          b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+          b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+          b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+          b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+          b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+          b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+          b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+          b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+          b[10] =     1.5000000000  c[10] =     0.5000000000
+          b[11] =     1.5000000000  c[11] =     0.5000000000
+        alpha =   1.0000
+    AFopr_Domainwall_5din<AField<double,ACCEL> >: construction finished.
+  AForce_F_Domainwall_5din<AField<double,ACCEL> >: construction finished.
+AForce_F_Domainwall_5din_eo<AField<double,ACCEL> >: construction finished.
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction finished.
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+ASolver_CG<Afield<float,ACCEL> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: setup finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+ASolver_CG<Afield<float,ACCEL> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: setup finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0005
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+ASolver_CG<Afield<float,ACCEL> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: setup finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   0.0020
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+ASolver_CG<Afield<float,ACCEL> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: setup finished.
+
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: being setup.
+AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<double,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   1.0000
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction
+AFopr_Smeared_alt<AField<double,ACCEL> >: construction finished.
+AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: construction
+  Parameters: fetch_int: key 'require_communication' not found.
+  req_comm = 0 (default)
+  do_comm[0] = 0
+  do_comm[1] = 0
+  do_comm[2] = 1
+  do_comm[3] = 1
+  Parameters: fetch_string: key 'code_implementation' not found.
+    code_implementation is not given
+  Parameters: fetch_double: key 'parameter_alpha' not found.
+    parameter alpha is not provided: set to 1.0.
+  AFopr_Domainwall_5din_eo<AField<float,ACCEL> >: input parameters
+    gamma matrix repr.:  Dirac
+    code implementation: 5d
+    mq   =   1.0000
+    M0   =   1.0000
+    Ns   =   12
+    boundary[0] =  1
+    boundary[1] =  1
+    boundary[2] =  1
+    boundary[3] = -1
+    coefficients:
+      b[ 0] =     1.5000000000  c[ 0] =     0.5000000000
+      b[ 1] =     1.5000000000  c[ 1] =     0.5000000000
+      b[ 2] =     1.5000000000  c[ 2] =     0.5000000000
+      b[ 3] =     1.5000000000  c[ 3] =     0.5000000000
+      b[ 4] =     1.5000000000  c[ 4] =     0.5000000000
+      b[ 5] =     1.5000000000  c[ 5] =     0.5000000000
+      b[ 6] =     1.5000000000  c[ 6] =     0.5000000000
+      b[ 7] =     1.5000000000  c[ 7] =     0.5000000000
+      b[ 8] =     1.5000000000  c[ 8] =     0.5000000000
+      b[ 9] =     1.5000000000  c[ 9] =     0.5000000000
+      b[10] =     1.5000000000  c[10] =     0.5000000000
+      b[11] =     1.5000000000  c[11] =     0.5000000000
+    alpha =   1.0000
+ASolver_CG<Afield<float,ACCEL> >:
+  Precision: float
+  Niter     = 4000
+  Stop_cond =   9.99999994e-09
+  init_guess_mode: 2
+ASolver_Richardson:
+  Precision: double
+  Niter     = 4000
+  Stop_cond =   1.00000000e-28
+  InitialGuess = 2
+Fprop_alt_Standard_eo_Richardson<AField<double,ACCEL>, AField<float,ACCEL> >: setup finished.
+AForce_F_Ratio_eo<AField<double,ACCEL> >: construction
+AForce_F_Ratio_eo<AField<double,ACCEL> >: construction finished.
+AForce_F_Ratio_eo<AField<double,ACCEL> >: construction
+AForce_F_Ratio_eo<AField<double,ACCEL> >: construction finished.
+Builder_Integrator:
+  Integrator = Omelyan
+   level     =  0:  Nstep =    2
+   level     =  1:  Nstep =    1
+   level     =  2:  Nstep =    3
+  Nprec      =    8
+Integrator_UpdateU:
+  Nprec    = 8
+Integrator_Omelyan:
+  Level:    2
+  Nstep    =    3
+  lambda_Omelyan =   0.193183
+Integrator_Omelyan:
+  Level:    1
+  Nstep    =    1
+  lambda_Omelyan =   0.193183
+Integrator_Omelyan:
+  Level:    0
+  Nstep    =    2
+  lambda_Omelyan =   0.193183
+HMC_General:
+  Number of actions:    4
+  traj_length     = 0.100000
+  Metropolis_test = false
+Object construction finished.
+HMC: Ntraj = 1
+
+---------------------------------------------------
+traj = 0
+RandomNumbers_parallel<RancomNumbers_Mseries>: init with 200000
+ Random number init: ndelay =    200000
+HMC (general) start.
+Langevin step
+  Kinetic term:
+    H_kin        =   3143703.69440218
+    H_kin/dof    =         0.49967825
+    Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: 
+  Shift solver in rational function
+    Nconv     =      822
+    diff(max) =  1.038998345143962e-14
+    Elapsed time =       6.061648 sec
+  Shift solver in rational function
+    Nconv     =       56
+    diff(max) =  8.229708937487507e-15
+    Elapsed time =       0.804449 sec
+      H_Frational  =  14155830.10879726
+      H_F/dof      =         0.50000191
+      elapsed time:     7.083906 [sec]
+    Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+  Richardson  nconv = 4, diff2 =  1.012228659193233e-31
+      Fprop_H_prec:      4 3.181554115826467e-16
+      H_Fratio     =  14151728.82867203
+      H_F/dof      =         0.49985705
+      elapsed time:     3.353474 [sec]
+    Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+  Richardson  nconv = 4, diff2 =  1.037435685478810e-31
+      Fprop_H:      4    3.2209e-16    0.0000e+00 [GFlops]
+        elapsed time:     3.234923 [sec]
+      H_Fratio     =  14151728.82867203
+      H_F/dof      =         0.49985705
+      elapsed time:     3.247794 [sec]
+    Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+  Richardson  nconv = 4, diff2 =  4.148648353054154e-32
+      Fprop_H_prec:      4 2.036823103034270e-16
+      H_Fratio     =  14147832.74280002
+      H_F/dof      =         0.49971943
+      elapsed time:     0.360510 [sec]
+    Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+  Richardson  nconv = 4, diff2 =  8.884837319499591e-32
+      Fprop_H:      4    2.9807e-16    0.0000e+00 [GFlops]
+        elapsed time:     3.351159 [sec]
+      H_Fratio     =  14147832.74280002
+      H_F/dof      =         0.49971943
+      elapsed time:     3.362579 [sec]
+  Action_G_Rectangle : Hamiltonian
+    Plaquette    =         0.62512995
+    H_Grectangle =   2580085.85166021
+    H_G/dof      =         2.18716588
+    Elapsed time =       0.186738 sec
+  H_total(init)  =  48179181.2263316885
+plaq = 6.2512994697494795e-01
+  plaq(init)     =       0.625129946975
+Integration level-0 start.
+  Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.871058527609557e-14  
+      elapsed time:     0.544354 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 708  
+      diff(max) =  9.699037254105447e-14  
+      elapsed time:     4.582360 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.739243287676879e-14  
+      elapsed time:     0.504935 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.289010 [sec]
+    Fave =     0.107972  Fmax =     0.370713  Fdev =     0.033199
+    elapsed time:     6.643763 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  1.037435685478810e-31
+    Fprop_MD:      4 3.220924844635171e-16
+      elapsed time:     3.251141 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.280723 [sec]
+    Fave =     0.000297  Fmax =     0.001537  Fdev =     0.000096
+    elapsed time:     3.624002 [sec]
+Integration level-1 start.
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  8.884837319499591e-32
+    Fprop_MD:      4 2.980744423713578e-16
+      elapsed time:     3.356898 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.278894 [sec]
+    Fave =     0.254173  Fmax =     0.965184  Fdev =     0.078297
+    elapsed time:     3.723502 [sec]
+Integration level-2 start.
+Action_G_Rectangle : force
+  Fave =     7.466279  Fmax =    12.788770  Fdev =     1.676718
+  Elapsed time =       0.474158 sec
+Action_G_Rectangle : force
+  Fave =     7.466312  Fmax =    12.836189  Fdev =     1.676715
+  Elapsed time =       0.470531 sec
+Action_G_Rectangle : force
+  Fave =     7.466309  Fmax =    12.882888  Fdev =     1.676730
+  Elapsed time =       0.468902 sec
+Action_G_Rectangle : force
+  Fave =     7.466385  Fmax =    12.928965  Fdev =     1.676777
+  Elapsed time =       0.469314 sec
+Action_G_Rectangle : force
+  Fave =     7.466424  Fmax =    12.974305  Fdev =     1.676842
+  Elapsed time =       0.469038 sec
+Action_G_Rectangle : force
+  Fave =     7.466542  Fmax =    13.019008  Fdev =     1.676938
+  Elapsed time =       0.468744 sec
+Action_G_Rectangle : force
+  Fave =     7.466623  Fmax =    13.062958  Fdev =     1.677051
+  Elapsed time =       0.471837 sec
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  8.476280370538539e-32
+    Fprop_MD:      4 2.911405222661136e-16
+      elapsed time:     3.388296 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.283694 [sec]
+    Fave =     0.253399  Fmax =     0.961942  Fdev =     0.078111
+    elapsed time:     3.975420 [sec]
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+Action_G_Rectangle : force
+  Fave =     7.466784  Fmax =    13.106265  Fdev =     1.677196
+  Elapsed time =       0.470373 sec
+Action_G_Rectangle : force
+  Fave =     7.466907  Fmax =    13.148805  Fdev =     1.677358
+  Elapsed time =       0.468816 sec
+Action_G_Rectangle : force
+  Fave =     7.467110  Fmax =    13.190680  Fdev =     1.677551
+  Elapsed time =       0.470836 sec
+Action_G_Rectangle : force
+  Fave =     7.467275  Fmax =    13.231774  Fdev =     1.677761
+  Elapsed time =       0.526515 sec
+Action_G_Rectangle : force
+  Fave =     7.467519  Fmax =    13.272190  Fdev =     1.678001
+  Elapsed time =       0.468126 sec
+Action_G_Rectangle : force
+  Fave =     7.467726  Fmax =    13.311812  Fdev =     1.678257
+  Elapsed time =       0.468904 sec
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  8.541473860199214e-32
+    Fprop_MD:      4 2.922580000649976e-16
+      elapsed time:     3.386444 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.277515 [sec]
+    Fave =     0.252131  Fmax =     0.945786  Fdev =     0.077766
+    elapsed time:     3.958813 [sec]
+Integration level-1 finished.
+  Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.881773240584773e-14  
+      elapsed time:     0.498831 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 709  
+      diff(max) =  9.940929276630180e-14  
+      elapsed time:     4.536313 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.741326082188061e-14  
+      elapsed time:     0.504976 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.277660 [sec]
+    Fave =     0.108004  Fmax =     0.371954  Fdev =     0.033223
+    elapsed time:     6.542001 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  1.130104054311607e-31
+    Fprop_MD:      4 3.361702030685658e-16
+      elapsed time:     3.339113 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.277662 [sec]
+    Fave =     0.000297  Fmax =     0.001571  Fdev =     0.000096
+    elapsed time:     3.704706 [sec]
+Integration level-1 start.
+Integrator_UpdateP: returns previous force.
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+Action_G_Rectangle : force
+  Fave =     7.468012  Fmax =    13.350745  Fdev =     1.678543
+  Elapsed time =       0.471819 sec
+Action_G_Rectangle : force
+  Fave =     7.468260  Fmax =    13.388872  Fdev =     1.678844
+  Elapsed time =       0.469618 sec
+Action_G_Rectangle : force
+  Fave =     7.468588  Fmax =    13.426300  Fdev =     1.679173
+  Elapsed time =       0.468918 sec
+Action_G_Rectangle : force
+  Fave =     7.468878  Fmax =    13.462913  Fdev =     1.679517
+  Elapsed time =       0.467445 sec
+Action_G_Rectangle : force
+  Fave =     7.469246  Fmax =    13.498817  Fdev =     1.679889
+  Elapsed time =       0.467517 sec
+Action_G_Rectangle : force
+  Fave =     7.469577  Fmax =    13.533896  Fdev =     1.680274
+  Elapsed time =       0.468836 sec
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  9.146116533025446e-32
+    Fprop_MD:      4 3.024254707035346e-16
+      elapsed time:     3.422630 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.300600 [sec]
+    Fave =     0.251030  Fmax =     0.921871  Fdev =     0.077503
+    elapsed time:     4.019377 [sec]
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+Action_G_Rectangle : force
+  Fave =     7.469987  Fmax =    13.568268  Fdev =     1.680687
+  Elapsed time =       0.470584 sec
+Action_G_Rectangle : force
+  Fave =     7.470358  Fmax =    13.601806  Fdev =     1.681111
+  Elapsed time =       0.491208 sec
+Action_G_Rectangle : force
+  Fave =     7.470808  Fmax =    13.634620  Fdev =     1.681561
+  Elapsed time =       0.468299 sec
+Action_G_Rectangle : force
+  Fave =     7.471219  Fmax =    13.666591  Fdev =     1.682021
+  Elapsed time =       0.466453 sec
+Action_G_Rectangle : force
+  Fave =     7.471709  Fmax =    13.697832  Fdev =     1.682507
+  Elapsed time =       0.478472 sec
+Action_G_Rectangle : force
+  Fave =     7.472161  Fmax =    13.728225  Fdev =     1.683001
+  Elapsed time =       0.499114 sec
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  8.977032885649614e-32
+    Fprop_MD:      4 2.996169702411666e-16
+      elapsed time:     3.410573 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.276166 [sec]
+    Fave =     0.249737  Fmax =     0.905399  Fdev =     0.077143
+    elapsed time:     3.982731 [sec]
+Integration level-1 finished.
+  Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.901109776017113e-14  
+      elapsed time:     0.498347 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 723  
+      diff(max) =  9.968892322478222e-14  
+      elapsed time:     4.636124 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.744478466635541e-14  
+      elapsed time:     0.507272 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.283557 [sec]
+    Fave =     0.108031  Fmax =     0.371608  Fdev =     0.033242
+    elapsed time:     6.647706 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  1.083415893572559e-31
+    Fprop_MD:      4 3.291528358639128e-16
+      elapsed time:     3.323479 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.313446 [sec]
+    Fave =     0.000297  Fmax =     0.001596  Fdev =     0.000096
+    elapsed time:     3.724535 [sec]
+Integration level-1 start.
+Integrator_UpdateP: returns previous force.
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+Action_G_Rectangle : force
+  Fave =     7.472691  Fmax =    13.757883  Fdev =     1.683519
+  Elapsed time =       0.473226 sec
+Action_G_Rectangle : force
+  Fave =     7.473181  Fmax =    13.786686  Fdev =     1.684046
+  Elapsed time =       0.470378 sec
+Action_G_Rectangle : force
+  Fave =     7.473750  Fmax =    13.814748  Fdev =     1.684594
+  Elapsed time =       0.469222 sec
+Action_G_Rectangle : force
+  Fave =     7.474280  Fmax =    13.841950  Fdev =     1.685148
+  Elapsed time =       0.537088 sec
+Action_G_Rectangle : force
+  Fave =     7.474888  Fmax =    13.868407  Fdev =     1.685723
+  Elapsed time =       0.469570 sec
+Action_G_Rectangle : force
+  Fave =     7.475456  Fmax =    13.893999  Fdev =     1.686304
+  Elapsed time =       0.470850 sec
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  9.206084512432500e-32
+    Fprop_MD:      4 3.034153014011077e-16
+      elapsed time:     3.412321 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.281777 [sec]
+    Fave =     0.248909  Fmax =     0.930979  Fdev =     0.076935
+    elapsed time:     3.997968 [sec]
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+Action_G_Rectangle : force
+  Fave =     7.476102  Fmax =    13.918851  Fdev =     1.686903
+  Elapsed time =       0.469341 sec
+Action_G_Rectangle : force
+  Fave =     7.476707  Fmax =    13.942836  Fdev =     1.687506
+  Elapsed time =       0.470078 sec
+Action_G_Rectangle : force
+  Fave =     7.477390  Fmax =    13.966069  Fdev =     1.688127
+  Elapsed time =       0.466519 sec
+Action_G_Rectangle : force
+  Fave =     7.478033  Fmax =    13.988431  Fdev =     1.688750
+  Elapsed time =       0.469931 sec
+Action_G_Rectangle : force
+  Fave =     7.478753  Fmax =    14.010039  Fdev =     1.689389
+  Elapsed time =       0.468045 sec
+Action_G_Rectangle : force
+  Fave =     7.479432  Fmax =    14.030775  Fdev =     1.690029
+  Elapsed time =       0.468744 sec
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  8.275756191453107e-32
+    Fprop_MD:      4 2.876761406765098e-16
+      elapsed time:     3.428684 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.275646 [sec]
+    Fave =     0.248259  Fmax =     0.953638  Fdev =     0.076752
+    elapsed time:     3.999608 [sec]
+Integration level-1 finished.
+  Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.929493334979262e-14  
+      elapsed time:     0.496271 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 742  
+      diff(max) =  9.836980090777796e-14  
+      elapsed time:     4.722428 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.749107533698282e-14  
+      elapsed time:     0.501986 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.275054 [sec]
+    Fave =     0.108086  Fmax =     0.369855  Fdev =     0.033270
+    elapsed time:     6.718037 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  9.610687813562842e-32
+    Fprop_MD:      4 3.100110935686470e-16
+      elapsed time:     3.377329 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.278707 [sec]
+    Fave =     0.000298  Fmax =     0.001612  Fdev =     0.000096
+    elapsed time:     3.743834 [sec]
+Integration level-1 start.
+Integrator_UpdateP: returns previous force.
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+Action_G_Rectangle : force
+  Fave =     7.480188  Fmax =    14.050757  Fdev =     1.690684
+  Elapsed time =       0.471553 sec
+Action_G_Rectangle : force
+  Fave =     7.480903  Fmax =    14.069865  Fdev =     1.691338
+  Elapsed time =       0.468144 sec
+Action_G_Rectangle : force
+  Fave =     7.481693  Fmax =    14.088216  Fdev =     1.692005
+  Elapsed time =       0.467833 sec
+Action_G_Rectangle : force
+  Fave =     7.482442  Fmax =    14.105694  Fdev =     1.692670
+  Elapsed time =       0.469042 sec
+Action_G_Rectangle : force
+  Fave =     7.483267  Fmax =    14.122414  Fdev =     1.693348
+  Elapsed time =       0.468361 sec
+Action_G_Rectangle : force
+  Fave =     7.484050  Fmax =    14.138261  Fdev =     1.694021
+  Elapsed time =       0.467542 sec
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  7.765310493842415e-32
+    Fprop_MD:      4 2.786630670512764e-16
+      elapsed time:     3.425415 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.276927 [sec]
+    Fave =     0.248307  Fmax =     0.968320  Fdev =     0.076828
+    elapsed time:     3.996991 [sec]
+Integration level-2 start.
+Integrator_UpdateP: returns previous force.
+Action_G_Rectangle : force
+  Fave =     7.484908  Fmax =    14.153361  Fdev =     1.694706
+  Elapsed time =       0.472631 sec
+Action_G_Rectangle : force
+  Fave =     7.485723  Fmax =    14.167588  Fdev =     1.695385
+  Elapsed time =       0.466830 sec
+Action_G_Rectangle : force
+  Fave =     7.486613  Fmax =    14.181059  Fdev =     1.696074
+  Elapsed time =       0.467553 sec
+Action_G_Rectangle : force
+  Fave =     7.487460  Fmax =    14.193658  Fdev =     1.696757
+  Elapsed time =       0.468326 sec
+Action_G_Rectangle : force
+  Fave =     7.488381  Fmax =    14.205503  Fdev =     1.697447
+  Elapsed time =       0.466597 sec
+Action_G_Rectangle : force
+  Fave =     7.489258  Fmax =    14.216479  Fdev =     1.698131
+  Elapsed time =       0.469685 sec
+Integration level-2 finished.
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  7.965143157662498e-32
+    Fprop_MD:      4 2.822258520699778e-16
+      elapsed time:     3.414492 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.278122 [sec]
+    Fave =     0.248687  Fmax =     0.971564  Fdev =     0.077021
+    elapsed time:     3.988781 [sec]
+Integration level-1 finished.
+  Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: 
+    Shift solver in force calculation (for numerator, 1st)
+      Number of shift values = 16
+      Nconv     = 52  
+      diff(max) =  8.967503824473165e-14  
+      elapsed time:     0.496749 [sec]
+    Shift solver in force calculation (for denominator)
+      Number of shift values = 16
+      Nconv     = 743  
+      diff(max) =  9.763766623447355e-14  
+      elapsed time:     4.715415 [sec]
+    Shift solver in force calculation (for numerator, 2nd)
+      Number of shift values = 16
+      Nconv     = 53  
+      diff(max) =  9.754776488218807e-14  
+      elapsed time:     0.502529 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.275177 [sec]
+    Fave =     0.108134  Fmax =     0.366721  Fdev =     0.033293
+    elapsed time:     6.709736 [sec]
+  Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+Richardson  nconv = 4, diff2 =  9.496485706596408e-32
+    Fprop_MD:      4 3.081636855081469e-16
+      elapsed time:     3.399517 [sec]
+    Force smearing: Nsmear = 3
+      elapsed time:     0.276054 [sec]
+    Fave =     0.000298  Fmax =     0.001618  Fdev =     0.000096
+    elapsed time:     3.763547 [sec]
+Integration level-0 finished.
+Hamiltonian calculation
+  Kinetic term:
+    H_kin        =   3127947.10720040
+    H_kin/dof    =         0.49717380
+    Action_F_alt_Rational_Ratio<AField<double,ACCEL> >: 
+  Shift solver in rational function
+    Nconv     =       57
+    diff(max) =  9.328147930563638e-15
+    Elapsed time =       0.753257 sec
+  Shift solver in rational function
+    Nconv     =      793
+    diff(max) =  9.836726931714532e-15
+    Elapsed time =       5.813782 sec
+      H_Frational  =  14155822.72332084
+      H_F/dof      =         0.50000165
+      elapsed time:     6.576568 [sec]
+    Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+  Richardson  nconv = 4, diff2 =  9.496485706596408e-32
+      Fprop_H:      4    3.0816e-16    0.0000e+00 [GFlops]
+        elapsed time:     3.374831 [sec]
+      H_Fratio     =  14151728.87294021
+      H_F/dof      =         0.49985705
+      elapsed time:     3.387003 [sec]
+    Action_F_alt_Ratio_eo<Afield<double,ACCEL> >: 
+  Richardson  nconv = 4, diff2 =  7.965143157662498e-32
+      Fprop_H:      4    2.8223e-16    0.0000e+00 [GFlops]
+        elapsed time:     3.372536 [sec]
+      H_Fratio     =  14147848.97352537
+      H_F/dof      =         0.49972001
+      elapsed time:     3.381224 [sec]
+  Action_G_Rectangle : Hamiltonian
+    Plaquette    =         0.62315109
+    H_Grectangle =   2595833.60571308
+    H_G/dof      =         2.20051541
+    Elapsed time =       0.189869 sec
+  H_total(trial) =  48179181.2826998979
+plaq = 6.2315109358989829e-01
+  plaq(trial)    =       0.623151093590
+Metropolis test.
+  H(diff)       =     0.05636821
+  exp(-diff_H)  =     0.94519104
+  Random number =    -1.00000000
+  Accepted
+plaq = 6.2315109358989829e-01
+  plaq(final)    =       0.623151093590
+Elapsed time: each trajectory: total       148.28 sec, count    1, average       148.28 sec
+Elapsed time: update_Nf2p1_eo: total       148.45 sec, count    1, average       148.45 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.17 sec, count  288, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.03 sec, count  312, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.04 sec, count  288, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.03 sec, count  288, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.04 sec, count  288, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.08 sec, count  288, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.08 sec, count  288, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count  288, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count  288, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count  288, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.02 sec, count   20, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.00 sec, count   44, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.00 sec, count   20, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.00 sec, count   20, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.00 sec, count   20, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.01 sec, count   20, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.01 sec, count   20, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count   20, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count   20, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count   20, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         7.10 sec, count 12132, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         1.09 sec, count 12156, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         1.61 sec, count 12132, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         1.15 sec, count 12132, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         1.50 sec, count 12132, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         3.18 sec, count 12132, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         3.15 sec, count 12132, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.04 sec, count 12132, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.01 sec, count 12132, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.02 sec, count 12132, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.05 sec, count   60, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.01 sec, count   84, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.01 sec, count   60, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.01 sec, count   60, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.01 sec, count   60, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.03 sec, count   60, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.03 sec, count   60, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count   60, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count   60, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count   60, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         4.71 sec, count 8064, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.72 sec, count 8088, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         1.07 sec, count 8064, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.76 sec, count 8064, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         1.00 sec, count 8064, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         2.10 sec, count 8064, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         2.08 sec, count 8064, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.03 sec, count 8064, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.01 sec, count 8064, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.01 sec, count 8064, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.04 sec, count   40, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.01 sec, count   64, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.01 sec, count   40, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.01 sec, count   40, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.01 sec, count   40, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.02 sec, count   40, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.02 sec, count   40, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count   40, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count   40, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count   40, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total        21.87 sec, count 36828, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         3.39 sec, count 36852, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         4.93 sec, count 36828, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         3.50 sec, count 36828, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         4.56 sec, count 36828, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         9.92 sec, count 36828, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         9.83 sec, count 36828, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.09 sec, count 36828, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.03 sec, count 36828, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.07 sec, count 36828, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.16 sec, count  180, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.02 sec, count  204, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.03 sec, count  180, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.02 sec, count  180, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.03 sec, count  180, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.09 sec, count  180, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.09 sec, count  180, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count  180, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count  180, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count  180, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total        11.92 sec, count 20188, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         1.82 sec, count 20212, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         2.68 sec, count 20188, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         1.92 sec, count 20188, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         2.51 sec, count 20188, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         5.38 sec, count 20188, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         5.33 sec, count 20188, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.07 sec, count 20188, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.02 sec, count 20188, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.04 sec, count 20188, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.09 sec, count  100, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.01 sec, count  124, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.02 sec, count  100, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.01 sec, count  100, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.01 sec, count  100, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.05 sec, count  100, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.05 sec, count  100, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count  100, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count  100, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count  100, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.07 sec, count   74, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.01 sec, count  126, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.01 sec, count   74, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.01 sec, count   74, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.01 sec, count   74, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.04 sec, count   74, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.04 sec, count   74, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count   74, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count   74, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count   74, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.02 sec, count   18, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.00 sec, count   42, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.00 sec, count   18, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.00 sec, count   18, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.00 sec, count   18, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.01 sec, count   18, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.01 sec, count   18, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count   18, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count   18, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count   18, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.03 sec, count   30, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.01 sec, count   64, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.01 sec, count   30, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.00 sec, count   30, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.00 sec, count   30, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.02 sec, count   30, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.02 sec, count   30, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count   30, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count   30, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count   30, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.00 sec, count    2, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.00 sec, count   26, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.00 sec, count    2, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.00 sec, count    2, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.00 sec, count    2, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.00 sec, count    2, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.00 sec, count    2, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count    2, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count    2, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count    2, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.44 sec, count  480, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.08 sec, count  664, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.08 sec, count  480, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.06 sec, count  480, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.07 sec, count  480, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.25 sec, count  480, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.25 sec, count  480, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count  480, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count  480, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count  480, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total        19.40 sec, count 21500, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         2.48 sec, count 21524, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         3.55 sec, count 21500, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         2.74 sec, count 21500, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         3.08 sec, count 21500, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total        10.94 sec, count 21500, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total        10.88 sec, count 21500, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.06 sec, count 21500, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.02 sec, count 21500, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.04 sec, count 21500, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         0.62 sec, count  676, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.11 sec, count 1038, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.12 sec, count  676, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.09 sec, count  676, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.10 sec, count  676, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         0.34 sec, count  676, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         0.34 sec, count  676, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.00 sec, count  676, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count  676, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.00 sec, count  676, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Deo & dagger   : total         3.45 sec, count 3776, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: Dee_inv & dag  : total         0.43 sec, count 3800, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: pack           : total         0.63 sec, count 3776, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: bulk           : total         0.48 sec, count 3776, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: boundary       : total         0.55 sec, count 3776, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm           : total         1.95 sec, count 3776, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_wait : total         1.94 sec, count 3776, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_wait : total         0.01 sec, count 3776, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_recv_start: total         0.00 sec, count 3776, average         0.00 sec
+Elapsed time: afopr_Domainwall_5din_eo: comm_send_start: total         0.01 sec, count 3776, average         0.00 sec
+Elapsed time: Main: total       150.04 sec, count    1, average       150.04 sec
+Timer: timestamp: 2025/12/03 17:33:24 +0900
