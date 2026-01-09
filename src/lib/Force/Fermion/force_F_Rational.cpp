@@ -3,12 +3,12 @@
 
         @brief
 
-        @author  Hideo Matsufuru (matufuru)
-                 $LastChangedBy: matufuru $
+        @author  Hideo Matsufuru (matsufuru)
+                 $LastChangedBy: kanamori $
 
-        @date    $LastChangedDate:: 2025-09-02 15:10:15 #$
+        @date    $LastChangedDate:: 2026-01-09 16:11:38 #$
 
-        @version $LastChangedRevision: 2654 $
+        @version $LastChangedRevision: 2687 $
 */
 
 #include "force_F_Rational.h"
@@ -134,6 +134,7 @@ void Force_F_Rational::force_udiv(Field& force_, const Field& eta_)
   force_udiv_impl(force, eta);
 
   copy(force_, force); // force_ = force;
+
 }
 
 
@@ -164,8 +165,7 @@ void Force_F_Rational::force_udiv_impl(Field_G& force, const Field_F& eta)
   int            Nconv;
   double         diff;
   solver.solve(psi, m_cl, eta, Nconv, diff);
-  vout.general(m_vl, "      Nvonv     = %8d\n", Nconv);
-  vout.general(m_vl, "      diff(max) = %22.15e\n", diff);
+  vout.general(m_vl, "      diff(max) = %22.15e  \n", diff);
 
   force.set(0.0);
 

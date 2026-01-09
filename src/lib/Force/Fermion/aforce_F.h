@@ -6,9 +6,9 @@
         @author  Hideo Matsufuru (matufuru)
                  $LastChangedBy: kanamori $
                                                                                
-        @date    $LastChangedDate:: 2025-12-03 19:35:35 #$
+        @date    $LastChangedDate:: 2026-01-09 16:11:38 #$
                                                                                
-        @version $LastChangedRevision: 2668 $
+        @version $LastChangedRevision: 2687 $
 */
 
 #ifndef AFORCE_F_INCLUDED
@@ -102,10 +102,12 @@ class AForce_F
   virtual void tidyup();
 
   //! common operations to setup force.
-  virtual void mult_generator(Field_G&) {};
+  //  virtual void mult_generator(Field_G&) {};
+  virtual void mult_generator(Field_G&);
 
   //! common operations to setup force (for template parameter field).
-  virtual void mult_generator(AFIELD&) {};
+  //  virtual void mult_generator(AFIELD&) {};
+  virtual void mult_generator(AFIELD&);
 
 
 #ifdef USE_FACTORY

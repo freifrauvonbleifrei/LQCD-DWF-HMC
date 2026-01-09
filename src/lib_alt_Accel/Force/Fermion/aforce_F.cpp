@@ -3,8 +3,8 @@
         @brief
         @author  Issaku Kanamori (kanamori)
                  $LastChangedBy: kanamori $
-        @date    $LastChangedDate: 2025-12-03 19:35:35 +0900 (2025年12月03日 (水)) $
-        @version $LastChangedRevision: 2668 $
+        @date    $LastChangedDate: 2026-01-09 16:11:38 +0900 (2026年01月09日 (金)) $
+        @version $LastChangedRevision: 2687 $
 */
 
 #include "lib/Force/Fermion/aforce_F.h"
@@ -98,11 +98,33 @@ void AForce_F<AFIELD>::tidyup()
 }
 
 //====================================================================
+// Note that since mult_generator() is called in force_core() and
+// force_core1(), its specialization must be placed before the
+// latter functions.
+template<>
+void AForce_F<AFIELD>::mult_generator(AFIELD& force)
+{
+  Accel_Gauge::mult_generator(force, m_ut, m_Ucp);
+}
+
+template<>
+void AForce_F<AFIELD>::mult_generator(Field_G& force)
+{
+  vout.crucial("%s: AForce_F<AFIELD>::mult_generator(Field_G& force) is not implemented\n", class_name.c_str());
+#pragma omp barrier
+  abort();
+
+
+}
+
+
+//====================================================================
 template<>
 void AForce_F<AFIELD>::force_core(AFIELD& force, const AFIELD& eta)
 {
   force_udiv(force, eta);
-  Accel_Gauge::mult_generator(force, m_ut, m_Ucp);
+  mult_generator(force);
+  //  Accel_Gauge::mult_generator(force, m_ut, m_Ucp);
 }
 
 //====================================================================
@@ -112,7 +134,8 @@ void AForce_F<AFIELD>::force_core1(AFIELD& force,
                                    const AFIELD& eta)
 {
   force_udiv1(force, zeta, eta);
-  Accel_Gauge::mult_generator(force, m_ut, m_Ucp);
+  mult_generator(force);
+  //  Accel_Gauge::mult_generator(force, m_ut, m_Ucp);
 }
 
 //====================================================================

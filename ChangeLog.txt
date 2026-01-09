@@ -3,6 +3,14 @@ Copyright (C) 2012 Bridge++ Project Team
 Verbatim copying and distribution of this entire article is permitted in any
 medium, provided this notice is preserved.
 
+Changes after Bridge++ version 2.1.0
+
+  BUG FIXES
+  * Fix redefintion of m_U in Force_F_Rational (in release 2.1.1)
+  * Fix dependence of version.h in Makefile (in release 2.1.1)
+  * Fix including non-existing files in bridge.h (in release 2.1.2)
+  * Fix barrier at adjusting indent in bridgeIO.cpp (in release 2.1.2)
+
 Changes between Bridge++ version 2.1.0 and 2.0.x
 
   FEATURES
@@ -16,7 +24,7 @@ Changes between Bridge++ version 2.1.0 and 2.0.x
   * Support of Moebius Domain-wall in force
   * Change of MPI compiler command name for Intel compiler
 
-BUG FIXES
+  BUG FIXES
   * Indent control in bidgeIO
   * Flop counting in afopr_Domainwall_eo
   * typo in afopr_Chebyshev.h

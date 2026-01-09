@@ -1,10 +1,10 @@
-Release Note for Bridge++ ver.2.0.0                 01 Mar 2023
+Release Note for Bridge++ ver.2.1.1                 10 Dec 2025
 ====================================
 
-   *************************************************************
-     This package is free software available under
-     "the GNU General Public License" published by the FSF.
-   *************************************************************
+  *************************************************************
+    This package is free software available under
+    "the GNU General Public License" published by the FSF.
+  *************************************************************
 
 Overview:
 ---------
@@ -20,9 +20,9 @@ Software Compatibility:
 -----------------------
 
 This code set follows the standard specification of C++.
-The code has been tested with GNU C/C++ 9.4, Clang C++ 14.0,
-Intel C++ 2020.4 and 2023.0, NVIDIA HPC SDK C++ 22.7,
-Fujitsu C++ (Clang mode) 1.2.36, NEC SX C++ 3.5.1.
+The code has been tested with GNU C/C++ 9.4.0, Clang C++ 14.0,
+Intel C++ 2023.2 and llvm-intel2025.0, NVIDIA HPC SDK C++ 24.9,
+Fujitsu C++ (Clang mode) 4.12.0.
 
 
 Installation:
@@ -56,7 +56,7 @@ available on our wiki website.
 Getting Help:
 -------------
 
-Visit our website, http://bridge.kek.jp/Lattice-code/ for a
+Visit our website, https://bridge.kek.jp/Lattice-code/ for a
 contact information. See also our first step guide and the
 doxygen document.
 
@@ -82,20 +82,20 @@ Tatsumi   Aoyama    (Univ. Tokyo)
 Issaku    Kanamori  (RIKEN R-CCS)
 Kazuyuki  Kanaya    (Univ. of Tsukuba)
 Hideo     Matsufuru (KEK)
-Yusuke    Namekawa  (Hiroshima Univ.)
-Hidekatsu Nemura    (Kyoto Univ.)
-Yusuke    Taniguchi (Univ. of Tsukuba)
+Yusuke    Namekawa  (Fukuyama Univ.)
+Hidekatsu Nemura    (Osaka Univ.)
+Keigo     Nitadori  (RIKEN R-CCS)
 
 Contributed by:
 ---------------
 Sinya     Aoki      (Kyoto Univ.)
+Wei-Lun   Chen      (SOKENDAI)
 Takumi    Doi       (RIKEN)
 Shoji     Hashimoto (KEK)
 Noriyoshi Ishii     (Osaka Univ.)
 Ken-ichi  Ishikawa  (Hiroshima Univ.)
 Takashi   Kaneko    (KEK)
 Yoshinobu Kuramashi (Univ. of Tsukuba)
-Keigo     Nitadori  (RIKEN R-CCS)
 Kenji     Sasaki    (Osaka Univ.)
 Naoya     Ukita     (Univ. of Tsukuba)
 Tomoteru  Yoshie    (Univ. of Tsukuba)
@@ -109,6 +109,7 @@ Shinji    Motoki
 Jun-Ichi  Noaki
 Kenji     Ogawa
 Hana      Saito
+Yusuke    Taniguchi
 Satoru    Ueda
 
 
@@ -118,7 +119,7 @@ and organizations:
   the Japanese Ministry of Education, Culture, Sports, Science
   and Technology) (Nos.20105001, 20105005)
 - JSPS KAKENHI Grant Numbers 25400284, 15K05068, 16K05340,
-  16H03988, 20K03961.
+  16H03988, 20K03961, 22H01224, 23K22495, 25H01109
 - HPCI Strategic Program Field 5 ("The origin of matter and
   the universe"),
 - Priority Issue on Post-K computer (Elucidation of the
@@ -129,12 +130,10 @@ and organizations:
    particles to creation of nuclei"
 - Multidisciplinary Cooperative Research Program, Center for
   Computational Science, University of Tsukuba (15a33, 16a42,
-  17a41, 18-14, 19-43, 20-79, 21-42, 22-60)
-- KEK Large-scale Simulation Program (Ohgata 09-22, 09/10-23,
-  10-18, (T)11-09, 12-18, 12/13-15)
+  17a41, 18-14, 19-43, 20-79, 21-42, 22-60, 23-42, 24-33, 25-29)
+- KEK Large-scale Simulation Program (Ohgata-s 2009-2012)
 - Particle, Nuclear, and Astro Physics Simulation Program,
-  Institute of Particle and Nuclear Studies, KEK (2019-T003,
-  2019-004, 2020-002, 2021-006, 2022-002)
+  Institute of Particle and Nuclear Studies, KEK (FY2019-2023)
 - KEK Computing Research Center
 - Research Center for Nuclear Physics, Osaka University
 - Yukawa Institute for Theoretical Physics, Kyoto University

@@ -4,11 +4,11 @@
         @brief
 
         @author  Shinji Motoki  (smotoki)
-                 $LastChangedBy: matufuru $
+                 $LastChangedBy: kanamori $
 
-        @date    $LastChangedDate:: 2025-09-02 15:10:15 #$
+        @date    $LastChangedDate:: 2026-01-09 16:11:38 #$
 
-        @version $LastChangedRevision: 2654 $
+        @version $LastChangedRevision: 2687 $
 */
 
 #ifndef DOXYGEN_INCLUDED
@@ -38,17 +38,17 @@
    Hideo     Matsufuru (KEK)              \n
    Yusuke    Namekawa  (Hiroshima Univ.)  \n
    Hidekatsu Nemura    (Kyoto Univ.)      \n
-   Yusuke    Taniguchi (Univ. of Tsukuba) \n
+   Keigo     Nitadori  (RIKEN R-CCS)      \n
 
    \subsection contributer Contributer
    Shinya    Aoki      (Kyoto Univ.)      \n
+   Wei-Lun   Chen      (SOKENDAI)         \n
    Takumi    Doi       (RIKEN)            \n
    Shoji     Hashimoto (KEK)              \n
    Noriyoshi Ishii     (Osaka Univ.)      \n
    Ken-ichi  Ishikawa  (Hiroshima Univ.)  \n
    Takashi   Kaneko    (KEK)              \n
    Yoshinobu Kuramashi (Univ. of Tsukuba) \n
-   Keigo     Nitadori  (RIKEN R-CCS)      \n
    Kenji     Sasaki    (Osaka Univ.)      \n
    Naoya     Ukita     (Univ. of Tsukuba) \n
    Tomoteru  Yoshie    (Univ. of Tsukuba) \n
@@ -61,6 +61,7 @@
    Jun-Ichi  Noaki    \n
    Kenji     Ogawa    \n
    Hana      Saito    \n
+   Yusuke    Taniguchi\n
    Satoru    Ueda     \n
 
    \section history [History]

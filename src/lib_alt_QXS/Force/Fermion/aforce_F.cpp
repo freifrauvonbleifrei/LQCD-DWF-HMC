@@ -3,8 +3,8 @@
         @brief
         @author  Hideo Matsufuru (matufuru)
                  $LastChangedBy: kanamori $
-        @date    $LastChangedDate:: 2025-12-03 19:35:35 #$
-        @version $LastChangedRevision: 2668 $
+        @date    $LastChangedDate:: 2026-01-09 16:11:38 #$
+        @version $LastChangedRevision: 2687 $
 */
 
 #include "lib/Force/Fermion/aforce_F.h"
@@ -37,6 +37,8 @@ bool AForce_F<AFIELD>::init_factory()
 #endif /* USE_FACTORY */
 
 
+// Instanciation of AForce_F<...> itself:
+//====================================================================
 
 // include files in alt-code dorectories
 #include "lib_alt_QXS/inline/define_vlen.h"
@@ -59,7 +61,13 @@ typedef double real_t;
 #include "lib_alt_QXS/Field/afield_Gauge-inc.h"
 namespace Alt_Gauge = QXS_Gauge;
 
+
 typedef AField<double, QXS> AFIELD;
+
+//====================================================================
+template<>
+const std::string AForce_F<AFIELD>::class_name
+                                          = "AForce_F<double, QXS>";
 
 //====================================================================
 template<>
@@ -100,6 +108,15 @@ void AForce_F<AFIELD>::mult_generator(AFIELD& force)
   scal(force, -2.0);
 
 #pragma omp barrier
+}
+
+//====================================================================
+template<>
+void AForce_F<AFIELD>::mult_generator(Field_G& force)
+{
+  vout.crucial("%s: mult_generator(Field&) must not be called\n",
+	       class_name.c_str());
+  exit(EXIT_FAILURE);
 }
 
 //====================================================================
