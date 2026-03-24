@@ -48,9 +48,10 @@ class Bridge(MakefilePackage):
         filter.filter(r'^\s*fftw_library_path =.*', 'fftw_library_path = {0}'.format(spec['fftw'].prefix if '+fftw' in spec else ''))
         filter.filter(r'^\s*use_alternative =.*', 'use_alternative = yes')
         # filter.filter(r'^\s*use_cpp11 =.*', 'use_cpp11 = yes')
-        filter.filter(r'^\s*use_qxs_arch =.*', 'use_qxs_arch = general') # or 'acle' ?
+        filter.filter(r'^\s*use_qxs_arch =.*', 'use_qxs_arch = {0}'.format('acle' if spec.target == 'a64fx' else 'general'))
         filter.filter(r'^\s*use_complex =.*', 'use_complex = std')
-        filter.filter(r'^\s*use_alt_qxs =.*', 'use_alt_qxs = {0}'.format('yes' if spec.target == 'aarch64' else 'no'))
+        # The benchmark executable needs either USE_ALT_QXS or USE_ALT_ACCEL to define IMPL.
+        filter.filter(r'^\s*use_alt_qxs =.*', 'use_alt_qxs = {0}'.format('no' if '+gpu' in spec else 'yes'))
         filter.filter(r'^\s*use_alt_accel =.*', 'use_alt_accel = {0}'.format('yes' if "+gpu" in spec else 'no'))
         if '+mpi' in spec:
             filter.filter('CXX =.*', 'CXX = {0}'.format(spec['mpi'].mpicxx))
@@ -67,11 +68,17 @@ class Bridge(MakefilePackage):
 
     def build(self, spec, prefix):
         make()
-        # make('program') #-> weird cd path errors
-        # make('program-with-lib')
+        # build the benchmark executable
+        make('-C', 'benchmark_hmc_dwf')
 
     def install(self, spec, prefix):
         # no install target -> manually copy files
         mkdir(prefix.lib)
         install('build/libbridge.a', prefix.lib + "/libbridge.a")
         install_tree('build/include/bridge/', prefix.include)
+        # install the benchmark executable and its parameter files
+        mkdirp(prefix.bin)
+        install('benchmark_hmc_dwf/hmc_dwf_eo.elf', prefix.bin)
+        mkdirp(prefix.share.bridge)
+        for f in find('.', 'benchmark_hmc_dwf/*.yaml'):
+            install(f, prefix.share.bridge)
