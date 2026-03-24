@@ -34,6 +34,9 @@ class Bridge(MakefilePackage):
     depends_on('fftw@3:', when='+fftw')
     depends_on('doxygen', when='+doxygen')
 
+    # OpenACC accelerator code requires the NVIDIA HPC SDK compiler (restrict keyword, OpenACC pragmas)
+    requires('%nvhpc', when='+gpu', msg='GPU support via OpenACC requires the NVIDIA HPC SDK compiler (nvhpc)')
+
     def edit(self, spec, prefix):
         makefile = join_path(self.stage.source_path, 'Makefile')
         filter = FileFilter(makefile)
