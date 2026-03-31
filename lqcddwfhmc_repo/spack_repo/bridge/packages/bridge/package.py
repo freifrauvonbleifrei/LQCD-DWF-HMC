@@ -25,7 +25,7 @@ class Bridge(MakefilePackage):
     variant('opt', default=True, description='Enable optimized code')
     variant('gauge_group', default='su3', values=('su2', 'su3'), multi=False, description='Gauge group')
     variant('testmanager', default=False, description='Enable test manager')
-    variant('fftw', default=True, description='Enable FFTW library support')
+    variant('fftw', default=False, description='Enable FFTW library support')
     variant('doxygen', default=False, description='Enable Doxygen documentation')
 
     depends_on("cxx", type="build")
