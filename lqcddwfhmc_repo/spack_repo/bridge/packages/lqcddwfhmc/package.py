@@ -6,8 +6,8 @@ from spack_repo.builtin.build_systems.makefile import MakefilePackage
 from spack.package import *
 
 
-class Bridge(MakefilePackage):
-    """Bridge code for lattice QCD simulations."""
+class LqcdDwfHmc(MakefilePackage):
+    """LQCD-DWF-HMC benchmark for Bridge code for lattice QCD simulations."""
 
     homepage = "https://bridge.kek.jp/Lattice-code/"
     # url    = "https://bridge.kek.jp/Lattice-code/code/old/bridge-2.1.0.tar.gz"
