@@ -42,7 +42,10 @@ class Lqcddwfhmc(MakefilePackage):
         filter = FileFilter(makefile)
         
         # Modify existing variables in Makefile: r"^\s* means newline and any leading spaces
-        filter.filter(r'^\s*use_mpi =.*', 'use_mpi = {0}'.format('yes' if '+mpi' in spec else 'no'))
+        if (spec.satisfies('%fujitsu') and '+mpi' in spec):
+            filter.filter(r'^\s*use_mpi =.*', 'use_mpi = fjmpi')
+        else:
+            filter.filter(r'^\s*use_mpi =.*', 'use_mpi = {0}'.format('yes' if '+mpi' in spec else 'no'))
         filter.filter(r'^\s*use_thread =.*', 'use_thread = {0}'.format('omp' if '+openmp' in spec else 'no'))
         filter.filter(r'^\s*use_opt_code =.*', 'use_opt_code = {0}'.format('yes' if '+opt' in spec else 'no'))
         filter.filter(r'^\s*use_gauge_group =.*', 'use_gauge_group = {0}'.format(spec.variants['gauge_group'].value))
