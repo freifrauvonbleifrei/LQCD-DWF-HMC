@@ -3,12 +3,12 @@
 
         @brief
 
-        @author  Hideo Matsufuru (matufuru)
-                 $LastChangedBy: matufuru $
+        @author  Hideo Matsufuru (matsufuru)
+                 $LastChangedBy: kanamori $
 
-        @date    $LastChangedDate:: 2025-09-02 15:10:15 #$
+        @date    $LastChangedDate:: 2026-01-09 16:11:38 #$
 
-        @version $LastChangedRevision: 2654 $
+        @version $LastChangedRevision: 2687 $
 */
 
 #ifndef FORCE_F_RATIONAL_INCLUDED
@@ -50,7 +50,7 @@ class Force_F_Rational : public Force
   int m_Niter;             // max iteration of shiftsolver
   double m_Stop_cond;      // stopping condition of shift solver
 
-  Field_G *m_U;
+  //Field_G *m_U;
   Fopr *m_fopr;
   Force *m_force;
 

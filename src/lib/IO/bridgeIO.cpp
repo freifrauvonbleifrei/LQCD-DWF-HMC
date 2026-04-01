@@ -6,9 +6,9 @@
         @author  Satoru Ueda (maintained by I.Kanamori)
                  $LastChangedBy: kanamori $
 
-        @date    $LastChangedDate:: 2025-05-27 18:31:04 #$
+        @date    $LastChangedDate:: 2026-01-09 16:11:38 #$
 
-        @version $LastChangedRevision: 2644 $
+        @version $LastChangedRevision: 2687 $
  */
 
 #include "bridgeIO.h"
@@ -512,6 +512,7 @@ namespace Bridge {
     if (ith == 0) {
       ++m_indent_level;
     }
+    #pragma omp barrier
   }
 
   void BridgeIO::decrease_indent(){
@@ -521,6 +522,7 @@ namespace Bridge {
     if (ith == 0) {
       --m_indent_level;
     }
+    #pragma omp barrier
   }
 
   void BridgeIO::set_indent(const int level){
@@ -530,6 +532,7 @@ namespace Bridge {
     if (ith == 0) {
       m_indent_level = level;
     }
+    #pragma omp barrier
   }
 
   //====================================================================

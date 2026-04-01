@@ -1,15 +1,16 @@
 # Bridge++: LQCD-DWF-HMC
 
 2025.12.3  Issaku Kanamori (kanamori-i@riken.jp)
+last update of this REAMDE: 2026.1.9
 
 ## Description
 
 Benchmark of HMC for Lattice QCD with Domainwall type fermion.
 It is based on Bridge++ https://bridge.kek.jp/Lattice-code/ 
 but some local extensions have been applied.
-The version of the base Bridge++ is 2.1.0.
+The version of the base Bridge++ is 2.1.2.
 
-The corelib version does not work temporary [2025.12.3].
+Now the corelib version also works [2026.1.9].
 
 This benchmark program runs 2+1 flavor HMC.
   * 1 flavor part: Rational HMC with even-odd decomposed fermion operator, for which multi shift CG solver (double prec.) is applied.
