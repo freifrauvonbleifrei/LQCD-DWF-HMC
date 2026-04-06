@@ -50,6 +50,7 @@ class Lqcddwfhmc(MakefilePackage):
         filter.filter(r'^\s*use_opt_code =.*', 'use_opt_code = {0}'.format('yes' if '+opt' in spec else 'no'))
         filter.filter(r'^\s*use_gauge_group =.*', 'use_gauge_group = {0}'.format(spec.variants['gauge_group'].value))
         filter.filter(r'^\s*use_testmanager =.*', 'use_testmanager = {0}'.format('yes' if '+testmanager' in spec else 'no'))
+        filter.filter(r'^\s*use_fftw_library =.*', 'use_fftw_library = {0}'.format('yes' if '+fftw' in spec else 'no'))
         filter.filter(r'^\s*use_fftw =.*', 'use_fftw = {0}'.format('yes' if '+fftw' in spec else 'no'))
         filter.filter(r'^\s*fftw_library_path =.*', 'fftw_library_path = {0}'.format(spec['fftw'].prefix if '+fftw' in spec else ''))
         filter.filter(r'^\s*use_alternative =.*', 'use_alternative = yes')
