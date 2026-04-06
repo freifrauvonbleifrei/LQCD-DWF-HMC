@@ -42,7 +42,7 @@ class Lqcddwfhmc(MakefilePackage):
         filter = FileFilter(makefile)
         
         # Modify existing variables in Makefile: r"^\s* means newline and any leading spaces
-        if (spec.satisfies('%fj') and '+mpi' in spec):
+        if ('^fujitsu-mpi' in spec and '+mpi' in spec):
             filter.filter(r'^\s*use_mpi =.*', 'use_mpi = fjmpi')
         else:
             filter.filter(r'^\s*use_mpi =.*', 'use_mpi = {0}'.format('yes' if '+mpi' in spec else 'no'))
