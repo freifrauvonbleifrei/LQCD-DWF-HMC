@@ -32,6 +32,7 @@ class Lqcddwfhmc(MakefilePackage):
 
     depends_on('mpi', when='+mpi')
     depends_on('fftw@3:', when='+fftw')
+    depends_on('fftw+mpi', when='+fftw+mpi')
     depends_on('doxygen', when='+doxygen')
 
     # OpenACC accelerator code requires the NVIDIA HPC SDK compiler (restrict keyword, OpenACC pragmas)
@@ -72,6 +73,11 @@ class Lqcddwfhmc(MakefilePackage):
             'PC_NVIDIA' if spec["cxx"].name == "nvhpc" else
             'PC_GNU'  # default
         ))     #TODO 've' is not really a thing...
+
+        makefile_target = join_path(self.stage.source_path, 'Makefile_target.inc')
+        filter = FileFilter(makefile_target)
+        if '+mpi' in spec:
+            filter.filter('CXX =.*', 'CXX = {0}'.format(spec['mpi'].mpicxx))
 
     def build(self, spec, prefix):
         make()
